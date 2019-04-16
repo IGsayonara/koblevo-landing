@@ -1,6 +1,5 @@
 html, body{
     width: 100%;
-    height: 200%;
     margin: 0;
     overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
@@ -10,8 +9,12 @@ html, body{
 }
 
 $main_color: rgb(70, 113, 213);
+$trans: .3s ease;
+.margin_50{
+    padding: 25px 0;
+}
 
-#menu_header{
+.menu_header{
     /*position: fixed;*/
     background-color:white;
     width: 100%;
@@ -26,19 +29,24 @@ $main_color: rgb(70, 113, 213);
 
 
 
-#menu{
+.menu{
     display: flex;
     height: 100%;
     justify-content: center;
     text-transform: uppercase;
     a{
         color: black;
+        transition: all $trans;
+        border: {
+            width: 5px 0;
+            style: solid;
+            color: transparent;
+        }
         text-decoration: none;
     }
-    /*a:focus{
-        border-top: 5px solid $main_color;
-        border-bottom: 5px solid $main_color;
-    }*/
+    a:hover{
+       border-color: $main_color;
+    }
     .menu_button{
         min-width: fit-content;
         height: 100%;
@@ -75,20 +83,25 @@ $main_color: rgb(70, 113, 213);
 
 
 
-#slider{
+.slider{
     height: 485px;
     background-color: red;
 }
 
-#buttons_bar{
+#zone{
+    background-color: #d5e0fdf3;
+}
+
+.buttons_bar{
     height: 35px;
     background-color: blueviolet;
 }
 
 
+
+
 .h_2{
     text-align: center;
-    margin-top: 40px;
     padding-top: 10px;
     padding-bottom: 10px; 
     h2{
@@ -96,10 +109,6 @@ $main_color: rgb(70, 113, 213);
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
     }
-}
-
-.reason_marks{
-    margin-top: 30px;
 }
 
 .circle_zone{
@@ -120,12 +129,13 @@ $main_color: rgb(70, 113, 213);
     .circle_text{
         margin-top: 10px;
         color: $main_color;
+        text-align: center;
     }
 }
 
 .reason_text{
-    margin-top: 50px;
     font-size: 16px;
+    text-align: center;
 }
 
 
@@ -133,43 +143,33 @@ $main_color: rgb(70, 113, 213);
 
 .gallery{
     margin-top: 50px;
+    .gallery_line{
+        display: flex;
+        justify-content: space-between;
+    }
+    .gallery_photo{
+        margin: 0px 5px;
+        z-index: 0;
+    }    
 }
 
-.gallery_line{
-    display: flex;
-    justify-content: space-between;
-}
 
-.gallery_photo{
-    z-index: 0;
-}
 
 
 
 .see_more{
-    margin-top: 50px;
     text-align: center;
-    a{
-        user-select: none;
+    .btn{
         padding: 10px 25px 10px 25px;
         background-color: white;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 12px;
-        text-decoration: none;
         color: $main_color;
-        border: 2px double $main_color;
+        border: 2px solid $main_color;
+        border-radius: 0;
     }
-    a:hover{
-        background-color: rgb(180, 200, 245);
-    }
-    a:active{
-        background-color: yellow
-    }
+    
 }
 
-.rooms{
-    margin-top: 40px;
-}
+
 
 .rooms_line{
     display:flex;
@@ -199,7 +199,11 @@ $main_color: rgb(70, 113, 213);
         }
     }
     .room_ul{
-        margin-left: 15px;
+        margin-left: 32px;
+        ul{
+            margin-left: 15px;
+            list-style: url(ul_ok.png);
+        }
     }
     .room_price{
         margin-top: 25px;
@@ -210,18 +214,17 @@ $main_color: rgb(70, 113, 213);
     }
     .room_button{
         text-align: center;
-        background-color: orangered;
-        width:fit-content;
         margin: 10px auto;
-        padding: 10px 25px 10px 25px;
-        a{
+        .btn{
             text-decoration: none;
             font-size: 12px;
             text-transform: uppercase;
             color: white;
-            user-select: none;
+            border: none;
+            border-radius: 0;
+            background-color: orangered;
+            width:fit-content;
+            padding: 10px 25px 10px 25px;
         }
     }
 }
-
-

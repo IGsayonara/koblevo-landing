@@ -2,198 +2,224 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>123</title>
+    <title>6ерёзка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <body>
-    <header id="menu_header">
+    <header class="menu_header">
         <hr> 
-        <div class="content_limits">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <img src="logo.png" alt="" id="logo" >
-                    </div>
-                    <div class="col-md-6">
-                        <div id = "menu">   
-                            <div class="menu_button"><a href="" onclick="return false;">Главная</a></div>
-                            <div class="menu_button"><a href="" onclick="return false;">Галерея</a></div>
-                            <div class="menu_button"><a href="" onclick="return false;">Доступные номера</a></div>
-                            <div class="menu_button"><a href="" onclick="return false;">Узнать стоимость</a></div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div id="contacts">
-                            <p id="phone_number">+38 (067) 761-20-17</p>
-                            <p id="make_call"><a href="">Заказать звонок</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-        </div>
-        <hr> 
-    </header>
-    <div id="slider"></div>
-    <div id="buttons_bar"></div>
-    <div class="h_2">
-        <h2><b>Почему Парк Отель Берёзка бронируют с нами</b></h2>
-    </div>
-    <div class="content_limits reason_marks">
         <div class="container">
             <div class="row">
-                <div class="col-extra-5">
-                    <div class="circle_zone">
-                        <div class="circle_mark">100%</div>
-                        <div class="circle_text">Гарания заселения</div>
+                <div class="col-md-3">
+                    <img src="logo.png" alt="" id="logo" >
+                </div>
+                <div class="col-md-6">
+                    <nav class = "menu">   
+                        <li class="menu_button"><a href="" onclick="return false;">Главная</a></li>
+                        <li class="menu_button"><a href="" onclick="return false;">Галерея</a></li>
+                        <li class="menu_button"><a href="" onclick="return false;">Доступные номера</a></li>
+                        <li class="menu_button"><a href="" onclick="return false;">Узнать стоимость</a></li>
+                    </nav>
+                </div>
+                <div class="col-md-3">
+                    <div id="contacts">
+                        <p id="phone_number">+38 (067) 761-20-17</p>
+                        <p id="make_call"><a href="">Заказать звонок</a></p>
                     </div>
                 </div>
-                <div class="col-extra-5">
-                    <div class="circle_zone">
-                        <div class="circle_mark">24/7</div>
-                        <div class="circle_text">Круглосуточая подержка</div>
-                    </div>
-                </div>
-                <div class="col-extra-5">
-                    <div class="circle_zone">
-                        <div class="circle_mark">до 40%</div>
-                        <div class="circle_text">Дискотная карта</div>
-                    </div>
-                </div>
-                <div class="col-extra-5">
-                    <div class="circle_zone">
-                        <div class="circle_mark">0%</div>
-                        <div class="circle_text">Бронь без комисий</div>
-                    </div>
-                </div>
-                <div class="col-extra-5">
-                    <div class="circle_zone">
-                        <div class="circle_mark">10+</div>
-                        <div class="circle_text">Более 10 способов оплаты</div>
+            </div>
+        </div> 
+        <hr> 
+    </header>
+    <div class="slider">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div id="zone">
+        <div class="buttons_bar"></div>
+        <div class="margin_50">
+            <div class="h_2">
+                <h2><b>Почему Парк Отель Берёзка бронируют с нами</b></h2>
+            </div>
+        </div>
+        <div class="margin_50">
+            <div class="container">
+                <div class="reason_marks">
+                <div class="row">
+                        <div class="col-extra-5">
+                            <div class="circle_zone">
+                                <div class="circle_mark">100%</div>
+                                <div class="circle_text">Гарания заселения</div>
+                            </div>
+                        </div>
+                        <div class="col-extra-5">
+                            <div class="circle_zone">
+                                <div class="circle_mark">24/7</div>
+                                <div class="circle_text">Круглосуточая подержка</div>
+                            </div>
+                        </div>
+                        <div class="col-extra-5">
+                            <div class="circle_zone">
+                                <div class="circle_mark">до 40%</div>
+                                <div class="circle_text">Дискотная карта</div>
+                            </div>
+                        </div>
+                        <div class="col-extra-5">
+                            <div class="circle_zone">
+                                <div class="circle_mark">0%</div>
+                                <div class="circle_text">Бронь без комисий</div>
+                            </div>
+                        </div>
+                        <div class="col-extra-5">
+                            <div class="circle_zone">
+                                <div class="circle_mark">10+</div>
+                                <div class="circle_text">Более 10 способов оплаты</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="margin_50">
+            <div class="container"><div class="reason_text">Парк-отель “Березка” – тихое семейное местечко на берегу Чёрного моря, расположенное по адресу проспект Курортный 35. Постояльцам всех возрастов предлагают поселиться в четырех или шестиэтажном здании со скоростным лифтом и новенькими полностью оборудованными номерами. Любителям уединения и отдыха “без соседей” предлагают арендовать один из 12-ти одноэтажных коттеджей с выходом на частный закрытый пляж.</div></div>
+        </div>
     </div>
-    <div class="content_limits reason_text">Парк-отель “Березка” – тихое семейное местечко на берегу Чёрного моря, расположенное по адресу проспект Курортный 35. Постояльцам всех возрастов предлагают поселиться в четырех или шестиэтажном здании со скоростным лифтом и новенькими полностью оборудованными номерами. Любителям уединения и отдыха “без соседей” предлагают арендовать один из 12-ти одноэтажных коттеджей с выходом на частный закрытый пляж.</div>
-    <div class="content_limits">
-        <div class="gallery"> 
-            <div class="gallery_line">
-                <div class="gallery_photo"><img src="photo1.png" alt=""></div>
-                <div class="gallery_photo"><img src="photo1.png" alt=""></div>
-                <div class="gallery_photo"><img src="photo1.png" alt=""></div>
+    <div class="margin_50">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div> 
+                <div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div> 
+                <div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div> 
+            </div>
+        </div>   
+    </div>
+    <div class="margin_50">
+        <div class="see_more">
+            <button type="button" class="btn btn-primary">Смотреть все фото</button>
+        </div>
+    </div>
+    <div class="margin_50">
+        <div class="h_2">
+            <h2><b>Доступные номера</b></h2>
+        </div>
+    </div>
+    <div class="margin_50">
+        <div class="container">
+            <div class="row"> 
+                <div class="col-md-3">
+                    <div class="room">
+                        <div class="room_img">
+                            <a href=""><img src="room1.png" alt="" width="100%"></a>    
+                        </div>
+                        <div class="room_info">
+                            <h3 class="room_type">Евростандарт</h3>
+                            <p class="room_squere">Площадь: 16 м²</p>
+                            <p class="room_visiters">Кол-во спальных мест: 2</p>
+                        </div>
+                        <hr>
+                        <div class="room_ul">
+                            <ul>
+                                <li>WiFi</li>
+                                <li>Кровать King Size</li>
+                                <li>Кровать King Size</li>
+                            </ul>
+                        </div>
+                        <div class="room_price">
+                            <p>от 600 грн</p> 
+                        </div>
+                        <div class="room_button"> 
+                            <button class="btn btn-primary">Бронировать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="room">
+                        <div class="room_img">
+                            <a href=""><img src="room1.png" alt="" width="100%"></a>    
+                        </div>
+                        <div class="room_info">
+                            <h3 class="room_type">Евростандарт</h3>
+                            <p class="room_squere">Площадь: 16 м²</p>
+                            <p class="room_visiters">Кол-во спальных мест: 2</p>
+                        </div>
+                        <hr>
+                        <div class="room_ul">
+                            <ul>
+                                <li>WiFi</li>
+                                <li>Кровать King Size</li>
+                                <li>Кровать King Size</li>
+                            </ul>
+                        </div>
+                        <div class="room_price">
+                            <p>от 600 грн</p> 
+                        </div>
+                        <div class="room_button"> 
+                            <button class="btn btn-primary">Бронировать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="room">
+                        <div class="room_img">
+                            <a href=""><img src="room1.png" alt="" width="100%"></a>    
+                        </div>
+                        <div class="room_info">
+                            <h3 class="room_type">Евростандарт</h3>
+                            <p class="room_squere">Площадь: 16 м²</p>
+                            <p class="room_visiters">Кол-во спальных мест: 2</p>
+                        </div>
+                        <hr>
+                        <div class="room_ul">
+                            <ul>
+                                <li>WiFi</li>
+                                <li>Кровать King Size</li>
+                                <li>Кровать King Size</li>
+                            </ul>
+                        </div>
+                        <div class="room_price">
+                            <p>от 600 грн</p> 
+                        </div>
+                        <div class="room_button"> 
+                            <button class="btn btn-primary">Бронировать</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="room">
+                        <div class="room_img">
+                            <a href=""><img src="room1.png" alt="" width="100%"></a>    
+                        </div>
+                        <div class="room_info">
+                            <h3 class="room_type">Евростандарт</h3>
+                            <p class="room_squere">Площадь: 16 м²</p>
+                            <p class="room_visiters">Кол-во спальных мест: 2</p>
+                        </div>
+                        <hr>
+                        <div class="room_ul">
+                            <ul>
+                                <li>WiFi</li>
+                                <li>Кровать King Size</li>
+                                <li>Кровать King Size</li>
+                            </ul>
+                        </div>
+                        <div class="room_price">
+                            <p>от 600 грн</p> 
+                        </div>
+                        <div class="room_button"> 
+                            <button class="btn btn-primary">Бронировать</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>    
-    <div class="see_more">
-        <a href="" onclick="return false;">Смотреть все фото</a>
-    </div>
-    <div class="h_2">
-        <h2><b>Доступные номера</b></h2>
-    </div>
-    <div class="content_limits">
-        <div class="rooms"> 
-            <div class="rooms_line">
-                <div class="room">
-                    <div class="room_img">
-                        <img src="room1.png" alt="">
-                    </div>
-                    <div class="room_info">
-                        <p class="room_type">Евростандарт</p>
-                        <p class="room_squere">Площадь: 16 м²</p>
-                        <p class="room_visiters">Кол-во спальных мест: 2</p>
-                    </div>
-                    <hr>
-                    <div class="room_ul">
-                        <ul>
-                            <li>WiFi</li>
-                            <li>Кровать King Size</li>
-                            <li>Кровать King Size</li>
-                        </ul>
-                    </div>
-                    <div class="room_price">
-                        <p>от 600 грн</p> 
-                    </div>
-                    <div class="room_button"> 
-                        <a href="" onclick="return false;">Бронировать</a>
-                    </div>
-                </div>
-                <div class="room">
-                    <div class="room_img">
-                        <img src="room1.png" alt="">
-                    </div>
-                    <div class="room_info">
-                        <p class="room_type">Евростандарт</p>
-                        <p class="room_squere">Площадь: 16 м²</p>
-                        <p class="room_visiters">Кол-во спальных мест: 2</p>
-                    </div>
-                    <hr>
-                    <div class="room_ul">
-                        <ul>
-                            <li>WiFi</li>
-                            <li>Кровать King Size</li>
-                            <li>Кровать King Size</li>
-                        </ul>
-                    </div>
-                    <div class="room_price">
-                        <p>от 600 грн</p> 
-                    </div>
-                    <div class="room_button"> 
-                        <a href="" onclick="return false;">Бронировать</a>
-                    </div>
-                </div>
-                <div class="room">
-                    <div class="room_img">
-                        <img src="room1.png" alt="">
-                    </div>
-                    <div class="room_info">
-                        <p class="room_type">Евростандарт</p>
-                        <p class="room_squere">Площадь: 16 м²</p>
-                        <p class="room_visiters">Кол-во спальных мест: 2</p>
-                    </div>
-                    <hr>
-                    <div class="room_ul">
-                        <ul>
-                            <li>WiFi</li>
-                            <li>Кровать King Size</li>
-                            <li>Кровать King Size</li>
-                        </ul>
-                    </div>
-                    <div class="room_price">
-                        <p>от 600 грн</p> 
-                    </div>
-                    <div class="room_button"> 
-                        <a href="" onclick="return false;">Бронировать</a>
-                    </div>
-                </div>
-                <div class="room">
-                    <div class="room_img">
-                        <img src="room1.png" alt="">
-                    </div>
-                    <div class="room_info">
-                        <p class="room_type">Евростандарт</p>
-                        <p class="room_squere">Площадь: 16 м²</p>
-                        <p class="room_visiters">Кол-во спальных мест: 2</p>
-                    </div>
-                    <hr>
-                    <div class="room_ul">
-                        <ul>
-                            <li>WiFi</li>
-                            <li>Кровать King Size</li>
-                            <li>Кровать King Size</li>
-                        </ul>
-                    </div>
-                    <div class="room_price">
-                        <p>от 600 грн</p> 
-                    </div>
-                    <div class="room_button"> 
-                        <a href="" onclick="return false;">Бронировать</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>    
+    </div>      
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
