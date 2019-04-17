@@ -3,8 +3,8 @@ import "./style.scss";
 import "./grid.scss";
 import "./index.js";
 import "slick";
+import "jquery"
 
-$('.your-class').slick({
-    setting-name: setting-value
-  });
- 
+$(document).ready(function(){
+    $('.slider').slick();
+});
