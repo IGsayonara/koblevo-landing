@@ -12,6 +12,7 @@ $main_color: rgb(70, 113, 213);
 $trans: .3s ease;
 .margin_50{
     padding: 25px 0;
+    width: 100%
 }
 
 .menu_header{
@@ -83,10 +84,10 @@ $trans: .3s ease;
 
 
 
-/*.slider{
-    height: 485px;
-    background-color: red;
-}*/
+.slider{
+    margin: auto;
+    text-align: center;
+}
 
 #zone{
     background-color: #d5e0fdf3;
@@ -224,7 +225,122 @@ $trans: .3s ease;
             border-radius: 0;
             background-color: orangered;
             width:fit-content;
-            padding: 10px 25px 10px 25px;
+            padding: 10px 25px;
         }
     }
 }
+
+.banner_cost{
+    display: flex;
+    background-color: red;
+    width: 100%;
+    justify-content: center;
+    padding: 90px 0;     
+    .cost{
+        background-color: white;
+        padding: 25px 40px;
+        width: 60%;
+        height: 100%;
+    }    
+}
+
+.cost_flex{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    .cost_row{
+        margin-top: 10px;
+        .parameter{
+            background-color: #f0f0f0;
+            color: #acacac;
+            border-radius: 5px;
+            padding: 10px;  
+            font-size: 18px;
+        }
+    }
+}
+
+#cr_5{
+    display: flex;
+    justify-content: space-between;
+    .age{
+        background-color: #f0f0f0;
+        color: #acacac;
+        border-radius: 5px;
+        padding: 10px;  
+        font-size: 18px;
+        width: calc(50% - 10px);
+    }
+}
+
+.cost_find{
+    text-align: center;
+    .btn{
+        padding: 10px 80px;
+        text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: white;
+            border: none;
+            border-radius: 0;
+            background-color: orangered;
+    }
+}
+
+.feedback_zone{
+    padding: 20px 0;
+    margin-top: -25px;
+    background-color: #4671d5;
+    display: flex;
+    .feedback_info{
+        display: flex;
+        width: 60%;
+        margin: auto;
+    }
+    .feedback_text{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: white;
+    }
+    .feedback_input{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        input{
+            color: #bbb6b6;
+            height: 35px;
+            min-width: fit-content;
+            padding: 5px 15px;
+        }
+        input:focus{
+            color: black;
+        }
+    }
+    .feedback_button{
+        text-align: right;
+        margin: 20px 10px;
+        flex-direction: column;
+        justify-content: center;
+        width: 25%;
+        height: 35px;
+        margin: auto;
+        .btn{
+            height: 35px;
+            text-decoration: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: white;
+            border: 2px solid white;
+            border-radius: 0;
+            background-color: #4671d5;
+            width:fit-content;
+            padding: 10px 25px;
+        }
+    }
+    
+}
+

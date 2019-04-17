@@ -37,9 +37,9 @@
         <hr> 
     </header>
     <div class="slider">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+        <div class="slick-slider"><img src="room1.png" alt=""></div>
+        <div><img src="room1.png" alt=""></div>
+        <div><img src="room1.png" alt=""></div>
     </div>
     <div id="zone">
         <div class="buttons_bar"></div>
@@ -218,10 +218,61 @@
                 </div>
             </div>
         </div>
-    </div>      
+    </div>
+    <div class="margin_50">
+        <div class="banner_cost">
+            <div class="cost">
+                <div class="h_2">
+                    <h2>Узнайте стоимость вашего отдыха онлайн</h2>
+                </div>
+                <div class="cost_flex">
+                    <div class="cost_row">
+                        <div class="parameter">Дата заезда</div>
+                    </div>
+                    <div class="cost_row">
+                            <div class="parameter">Дата выезда</div>
+                    </div>
+                    <div class="cost_row">
+                        <div class="parameter">Количество номеров</div>
+                    </div>
+                    <div class="cost_row" id ="cr_5">
+                        <div class="age">Взросых:</div>
+                        <div class="age">Детей:</div>
+                    </div>
+                </div>
+                <div class="margin_50">
+                    <p>
+                        <input class type="checkbox"> Я согласен с обработкой моих данных
+                    </p>
+                </div>
+                <div class="margin_50">
+                    <div class="cost_find">
+                        <button type="button" class="btn btn-primary">Поиск</button>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <div class="feedback_zone">
+        <div class="margin_50">
+            <div class="feedback_info">
+                <div class="feedback_text">
+                    <p>Остались вопросы? Закажите обратную </p>
+                    <p>связь и получите необходимую информацию!</p>
+                </div>
+                <div class="feedback_input">
+                    <input type="number" value="Введите Ваш номер телефона" onfocus="this.value=''">
+                </div>
+                <div class="feedback_button">
+                        <button type="button" class="btn btn-primary">Смотреть все фото</button>
+                </div>
+            </div>
+        </div>
+    </div>       
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="slick/slick.min.js"></script> 
 <script src="dist/build.js"></script>
 </body>
 </html>
