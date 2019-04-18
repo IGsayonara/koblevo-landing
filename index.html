@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>6ерёзка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="src/slick/slick.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -14,11 +13,11 @@
     <header class="menu_header">
         <hr> 
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
+            <div class=flex_header>
+                <div class="header_logo">
                     <img src="logo.png" alt="" id="logo" >
                 </div>
-                <div class="col-md-6">
+                <div class="flex_menu">
                     <nav class = "menu">   
                         <li class="menu_button"><a href="" onclick="return false;">Главная</a></li>
                         <li class="menu_button"><a href="" onclick="return false;">Галерея</a></li>
@@ -26,23 +25,21 @@
                         <li class="menu_button"><a href="" onclick="return false;">Узнать стоимость</a></li>
                     </nav>
                 </div>
-                <div class="col-md-3">
-                    <div id="contacts">
-                        <p id="phone_number">+38 (067) 761-20-17</p>
+                <div class="flex_contacts">
+                    <div class="contacts">
+                        <p id="phone_number"><a href="">+38 (067) 761-20-17</a></p>
                         <p id="make_call"><a href="">Заказать звонок</a></p>
                     </div>
                 </div>
             </div>
         </div> 
-        <hr> 
     </header>
-    <div class="slider">
-        <div class="slick-slider"><img src="room1.png" alt=""></div>
-        <div><img src="room1.png" alt=""></div>
-        <div><img src="room1.png" alt=""></div>
-    </div>
     <div id="zone">
-        <div class="buttons_bar"></div>
+        <div class="slider">
+            <div id="sl_1" class="sl_item"><img src="" alt=""></div>
+            <div id="sl_2" class="sl_item"><img src="" alt=""></div>
+            <div id="sl_3" class="sl_item"><img src="" alt=""></div>
+        </div>
         <div class="margin_50">
             <div class="h_2">
                 <h2><b>Почему Парк Отель Берёзка бронируют с нами</b></h2>
@@ -227,23 +224,23 @@
                 </div>
                 <div class="cost_flex">
                     <div class="cost_row">
-                        <div class="parameter">Дата заезда</div>
+                        <form class="parameter">Дата заезда</form>
                     </div>
-                    <div class="cost_row">
+                    <form class="cost_row">
                             <div class="parameter">Дата выезда</div>
-                    </div>
+                    </form>
                     <div class="cost_row">
-                        <div class="parameter">Количество номеров</div>
+                        <form class="parameter">Количество номеров</form>
                     </div>
                     <div class="cost_row" id ="cr_5">
-                        <div class="age">Взросых:</div>
-                        <div class="age">Детей:</div>
+                        <form class="age">Взросых:</form>
+                        <form class="age">Детей:</form>
                     </div>
                 </div>
                 <div class="margin_50">
-                    <p>
+                    <form>
                         <input class type="checkbox"> Я согласен с обработкой моих данных
-                    </p>
+                    </form>
                 </div>
                 <div class="margin_50">
                     <div class="cost_find">
