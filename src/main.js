@@ -14,5 +14,27 @@ $( document ).ready(function() {
         infinite: true,
         autoplaySpeed: 5000,
     });
+
+    var is_open = false;
+
+    $(".see_more").click(function(){
+        if (is_open == false){ 
+        is_open = true;
+        $(".see_more > button").text("Скрыть");
+        $("#r1").after("<div class='row' id='r2'></div>");
+        $("#r2").after("<div class='row' id='r3'></div>");
+        $('#r2').append('<div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div><div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div><div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div>');
+        $('#r3').append('<div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div><div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div><div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div>');
+        }
+        else{
+            is_open = false;
+            $(".see_more > button").text("Смотреть все фото");
+            $("#r2").html("");
+            $("#r3").html("");
+            $("#r2").remove();
+            $("#r3").remove();
+        }
+    });
 });
+
 

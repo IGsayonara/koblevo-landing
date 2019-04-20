@@ -35,10 +35,45 @@
         </div> 
     </header>
     <div id="zone">
-        <div class="slider">
-            <div id="sl_1" class="sl_item"><img src="" alt=""></div>
-            <div id="sl_2" class="sl_item"><img src="" alt=""></div>
-            <div id="sl_3" class="sl_item"><img src="" alt=""></div>
+        <div class="slider_zone">  
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 offset-md-8">
+                        <form class="slider_form" action="handler.php">
+                            <div>
+                                <h2>Оставьте запрос на лучшую</h2>
+                                <h2>цену кемпинг "Альянс"</h2>
+                            </div>
+                            <div class="slider_form_name"><textarea id="ta1" name="sl_info" required wrap="hard" placeholder="Ваше имя, количество человек и даты"></textarea></div>
+                            <div class="slider_form_phone"><input id="in2" name="sl_phone" required type="tel" maxlength="16" placeholder="Ваш телефон/viber"></div>
+                            <div class="slider_form_button"><button class="btn btn-primary" type="submit">Хочу на море!</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <div id="sl_1" class="sl_item">
+                    <div class="slider_text">
+                        <h1>Парк Отель “Берёзка”</h1>
+                        <h2>Забронируйте номер онлайн или по номеру телефона <span>+38 (067) 761-20-17</span></h2>
+                    </div>    
+                    <img src="sl_1.png" alt="">
+                </div>
+                <div id="sl_2" class="sl_item">
+                    <div class="slider_text">
+                        <h1>Я Игорь, а Что?</h1>
+                        <h2>Забронируйте номер онлайн или по номеру телефона <span>+38 (067) 761-20-17</span></h2>
+                    </div> 
+                    <img src="sl_1.png" alt="">
+                </div>
+                <div id="sl_3" class="sl_item">
+                    <div class="slider_text">
+                        <h1>Мы вам не верим!!!</h1>
+                        <h2>Забронируйте номер онлайн или по номеру телефона <span>+38 (067) 761-20-17</span></h2>
+                    </div> 
+                    <img src="sl_1.png" alt="">
+                </div>
+            </div>
         </div>
         <div class="margin_50">
             <div class="h_2">
@@ -87,9 +122,9 @@
             <div class="container"><div class="reason_text">Парк-отель “Березка” – тихое семейное местечко на берегу Чёрного моря, расположенное по адресу проспект Курортный 35. Постояльцам всех возрастов предлагают поселиться в четырех или шестиэтажном здании со скоростным лифтом и новенькими полностью оборудованными номерами. Любителям уединения и отдыха “без соседей” предлагают арендовать один из 12-ти одноэтажных коттеджей с выходом на частный закрытый пляж.</div></div>
         </div>
     </div>
-    <div class="margin_50">
+    <div class="margin_50 gallery">
         <div class="container">
-            <div class="row">
+            <div class="row" id="r1">
                 <div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div> 
                 <div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div> 
                 <div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div> 
@@ -217,40 +252,42 @@
         </div>
     </div>
     <div class="margin_50">
-        <div class="banner_cost">
-            <div class="cost">
-                <div class="h_2">
-                    <h2>Узнайте стоимость вашего отдыха онлайн</h2>
+        <form action="">
+            <div class="banner_cost">
+                <div class="cost">
+                    <div class="h_2">
+                        <h2>Узнайте стоимость вашего отдыха онлайн</h2>
+                    </div>
+                    <div class="cost_flex">
+                        <div class="cost_row">
+                            <input class="parameter" value="Дата заезда" required type="date" name="first_data"></input>
+                        </div>
+                        <div class="cost_row">
+                            <input class="parameter" value="Дата выезда" required type="date" name="last_data"></input>
+                        </div>
+                        <div class="cost_row">
+                            <input class="parameter" value="Количество номеров" required type="number" name="a_num_of_flats"></input>
+                        </div>
+                        <div class="cost_row" id ="cr_5">
+                            <input class="age" value="Взрослых" required name="adults"></input>
+                            <input class="age" value="Детей" required name="childrens"></input>
+                        </div>
+                    </div>
+                    <div class="margin_50">
+                        <div>
+                            <input class type="checkbox" required> Я согласен с обработкой моих данных
+                        </div>
+                    </div>
+                    <div class="margin_50">
+                        <div class="cost_find">
+                            <button type="submit" class="btn btn-primary">Поиск</button>
+                        </div>
+                    </div>    
                 </div>
-                <div class="cost_flex">
-                    <div class="cost_row">
-                        <form class="parameter">Дата заезда</form>
-                    </div>
-                    <form class="cost_row">
-                            <div class="parameter">Дата выезда</div>
-                    </form>
-                    <div class="cost_row">
-                        <form class="parameter">Количество номеров</form>
-                    </div>
-                    <div class="cost_row" id ="cr_5">
-                        <form class="age">Взросых:</form>
-                        <form class="age">Детей:</form>
-                    </div>
-                </div>
-                <div class="margin_50">
-                    <form>
-                        <input class type="checkbox"> Я согласен с обработкой моих данных
-                    </form>
-                </div>
-                <div class="margin_50">
-                    <div class="cost_find">
-                        <button type="button" class="btn btn-primary">Поиск</button>
-                    </div>
-                </div>    
             </div>
-        </div>
+        </form> 
     </div>
-    <div class="feedback_zone">
+    <form class="feedback_zone" action="">
         <div class="margin_50">
             <div class="feedback_info">
                 <div class="feedback_text">
@@ -258,14 +295,15 @@
                     <p>связь и получите необходимую информацию!</p>
                 </div>
                 <div class="feedback_input">
-                    <input type="number" value="Введите Ваш номер телефона" onfocus="this.value=''">
+                    <input type="tel" required placeholder="Введите ваш номер телефона">
                 </div>
                 <div class="feedback_button">
-                        <button type="button" class="btn btn-primary">Смотреть все фото</button>
+                        <button type="submit" class="btn btn-primary">Заказать звонок</button>
                 </div>
             </div>
         </div>
-    </div>       
+    </form>    
+    <map name="my_map"></map>   
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
