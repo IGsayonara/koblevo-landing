@@ -3,6 +3,8 @@ import "./style.scss";
 import "./grid.scss";
 require ("slick-carousel/slick/slick")
 import "slick-carousel/slick/slick.scss"
+import "bootstrap-datepicker"
+require ("bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css")
 
 console.log($.slick);
 
@@ -16,11 +18,14 @@ $( document ).ready(function() {
     });
 
     var is_open = false;
+    var see_more_width;
 
     $(".see_more").click(function(){
         if (is_open == false){ 
         is_open = true;
+        
         $(".see_more > button").text("Скрыть");
+      
         $("#r1").after("<div class='row' id='r2'></div>");
         $("#r2").after("<div class='row' id='r3'></div>");
         $('#r2').append('<div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div><div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div><div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div>');
@@ -35,6 +40,10 @@ $( document ).ready(function() {
             $("#r3").remove();
         }
     });
+
+    $( function() {
+        $( ".datepicker" ).datepicker();
+      } );
 });
 
 

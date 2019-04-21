@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <title>6ерёзка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="src/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="src/slick/slick.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&amp;subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
     <header class="menu_header">
@@ -84,31 +86,31 @@
             <div class="container">
                 <div class="reason_marks">
                 <div class="row">
-                        <div class="col-extra-5">
+                        <div class="col-lg-extra-5 col-6 col-sm-4">
                             <div class="circle_zone">
                                 <div class="circle_mark">100%</div>
                                 <div class="circle_text">Гарания заселения</div>
                             </div>
                         </div>
-                        <div class="col-extra-5">
+                        <div class="col-lg-extra-5 col-6 col-sm-4">
                             <div class="circle_zone">
                                 <div class="circle_mark">24/7</div>
                                 <div class="circle_text">Круглосуточая подержка</div>
                             </div>
                         </div>
-                        <div class="col-extra-5">
+                        <div class="col-lg-extra-5 col-6 col-sm-4">
                             <div class="circle_zone">
                                 <div class="circle_mark">до 40%</div>
                                 <div class="circle_text">Дискотная карта</div>
                             </div>
                         </div>
-                        <div class="col-extra-5">
+                        <div class="col-lg-extra-5 col-6 col-sm-6">
                             <div class="circle_zone">
                                 <div class="circle_mark">0%</div>
                                 <div class="circle_text">Бронь без комисий</div>
                             </div>
                         </div>
-                        <div class="col-extra-5">
+                        <div class="col-lg-extra-5 col-12 col-sm-6">
                             <div class="circle_zone">
                                 <div class="circle_mark">10+</div>
                                 <div class="circle_text">Более 10 способов оплаты</div>
@@ -125,9 +127,9 @@
     <div class="margin_50 gallery">
         <div class="container">
             <div class="row" id="r1">
-                <div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div> 
-                <div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div> 
-                <div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div> 
+                <div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%" height="218px"></div></a></div> 
+                <div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo2.png" alt="" width="100%" height="218px"></div></a></div> 
+                <div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo3.png" alt="" width="100%" height="218px"></div></a></div> 
             </div>
         </div>   
     </div>
@@ -147,7 +149,7 @@
                 <div class="col-md-3">
                     <div class="room">
                         <div class="room_img">
-                            <a href=""><img src="room1.png" alt="" width="100%"></a>    
+                            <a href=""><img src="room1.png" alt="" width="100%" height="178px"></a>    
                         </div>
                         <div class="room_info">
                             <h3 class="room_type">Евростандарт</h3>
@@ -173,7 +175,7 @@
                 <div class="col-md-3">
                     <div class="room">
                         <div class="room_img">
-                            <a href=""><img src="room1.png" alt="" width="100%"></a>    
+                            <a href=""><img src="room2.png" alt="" width="100%" height="178px"></a>    
                         </div>
                         <div class="room_info">
                             <h3 class="room_type">Евростандарт</h3>
@@ -199,7 +201,7 @@
                 <div class="col-md-3">
                     <div class="room">
                         <div class="room_img">
-                            <a href=""><img src="room1.png" alt="" width="100%"></a>    
+                            <a href=""><img src="room3.png" alt="" width="100%" height="178px"></a>    
                         </div>
                         <div class="room_info">
                             <h3 class="room_type">Евростандарт</h3>
@@ -225,7 +227,7 @@
                 <div class="col-md-3">
                     <div class="room">
                         <div class="room_img">
-                            <a href=""><img src="room1.png" alt="" width="100%"></a>    
+                            <a href=""><img src="room4.png" alt="" width="100%" height="178px"></a>    
                         </div>
                         <div class="room_info">
                             <h3 class="room_type">Евростандарт</h3>
@@ -256,21 +258,56 @@
             <div class="banner_cost">
                 <div class="cost">
                     <div class="h_2">
-                        <h2>Узнайте стоимость вашего отдыха онлайн</h2>
+                        <h2>Узнайте цену на отдых в Парк Отеле “Берёзка”</h2>
                     </div>
                     <div class="cost_flex">
                         <div class="cost_row">
-                            <input class="parameter" value="Дата заезда" required type="date" name="first_data"></input>
+                            <div class="parameter">
+                                <label class="form_mark" for="cost_in2"></label>
+                                <input name="first_data" required type="text" readonly placeholder="Дата заезда:" class="datepicker" id="cost_in1"> 
+                            </div>
                         </div>
                         <div class="cost_row">
-                            <input class="parameter" value="Дата выезда" required type="date" name="last_data"></input>
+                            <div class="parameter">
+                                <label class="form_mark" for="cost_in2"></label>
+                                <input name="second_data" required type="text" readonly placeholder="Дата выезда:" class="datepicker" id="cost_in2"> 
+                            </div>
                         </div>
                         <div class="cost_row">
-                            <input class="parameter" value="Количество номеров" required type="number" name="a_num_of_flats"></input>
+                            <div class="parameter">
+                                    <label class="form_mark" for="sel1"></label>
+                                <select name="a_num_of_flats" required id="sel1">
+                                    <option style="display: none;" value="">Количество номеров:</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="cost_row" id ="cr_5">
-                            <input class="age" value="Взрослых" required name="adults"></input>
-                            <input class="age" value="Детей" required name="childrens"></input>
+                        <div class="cost_row">
+                            <div class="cost_form_age">
+                                <div class="age">
+                                    <label class="form_mark" for="sel2"></label>
+                                    <div class="select-wrap">
+                                        <select name="adults" required>
+                                            <option style="display: none;" value="" id="sel2">Взрослых:</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>    
+                                </div>
+                                <div class="age">
+                                    <label class="form_mark" for="sel3"></label>
+                                    <select name="childrens" required>
+                                        <option style="display: none;" value="" id="sel3">Детей:</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="margin_50">
@@ -289,25 +326,27 @@
     </div>
     <form class="feedback_zone" action="">
         <div class="margin_50">
-            <div class="feedback_info">
-                <div class="feedback_text">
-                    <p>Остались вопросы? Закажите обратную </p>
-                    <p>связь и получите необходимую информацию!</p>
-                </div>
-                <div class="feedback_input">
-                    <input type="tel" required placeholder="Введите ваш номер телефона">
-                </div>
-                <div class="feedback_button">
-                        <button type="submit" class="btn btn-primary">Заказать звонок</button>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-12">
+                        <div class="feedback_text">
+                            <p>Остались вопросы? Закажите обратную </p>
+                            <p>связь и получите необходимую информацию!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                        <input type="tel" required placeholder="Введите ваш номер телефона">
+                    </div>
+                    <div class="col-md-3 col-12">
+                            <button type="submit" class="btn btn-primary">Заказать звонок</button>
+                    </div>
                 </div>
             </div>
         </div>
     </form>    
     <map name="my_map"></map>   
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="slick/slick.min.js"></script> 
 <script src="dist/build.js"></script>
 </body>
 </html>

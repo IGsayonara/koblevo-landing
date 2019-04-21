@@ -280,6 +280,7 @@ $trans: .3s ease;
 }
 
 .circle_zone{
+    margin-top: 20px;
     .circle_mark{
         font-weight: bold;
         margin: auto;
@@ -408,11 +409,18 @@ $trans: .3s ease;
     justify-content: center;
     padding: 90px 0;     
     .cost{
+        border-radius: 10px;
         background-color: white;
         padding: 25px 40px;
         width: 60%;
         height: 100%;
+       
     }    
+
+                ::-webkit-input-placeholder {color:#acacac;}
+                ::-moz-placeholder          {color:#acacac;}/* Firefox 19+ */
+                :-moz-placeholder           {color:#acacac;}/* Firefox 18- */
+                :-ms-input-placeholder      {color:#acacac;}
 }
 
 .cost_flex{
@@ -423,6 +431,8 @@ $trans: .3s ease;
     .cost_row{
         margin-top: 10px;
         .parameter{
+            display: flex;
+            position: relative;
             user-select: none;
             border: none;
             outline: none;
@@ -432,23 +442,86 @@ $trans: .3s ease;
             border-radius: 5px;
             padding: 10px;  
             font-size: 18px;
+            .form_mark{
+                position: absolute;
+                right: 0;
+                top: 0;
+                background-image: url(form_mark.png);
+                background-color: #f0f0f0;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-left: 1px solid #acacac;
+                border-top-right-radius: 5px;
+                width: 44px;
+                height: 100%;
+            }
+            
+            select{
+                color: #acacac;
+                background-color: #f0f0f0;
+                width: 100%;
+                outline: none;
+                border: none;
+            }  
+            input{
+                color: #acacac;
+                background-color: #f0f0f0;
+                width: 100%;
+                outline: none;
+                border: none;
+                height: 100%;
+            }  
+            
+        }
+        .cost_form_age{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .age{
+            position: relative;
+            outline: none;
+            border: none;
+            background-color: #f0f0f0;
+            color: #acacac;
+            border-radius: 5px;
+            padding: 10px;  
+            font-size: 18px;
+            width: calc(50% - 10px);
+            select{
+                color: #acacac;
+                background-color: #f0f0f0;
+                width: 100%;
+                outline: none;
+                border: none;
+                option:hover{
+                    background-color: $main_color;
+                }
+            }
+            .form_mark{
+                position: absolute;
+                right: 0;
+                top: 0;
+                background-image: url(form_mark.png);
+                background-color: #f0f0f0;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-left: 1px solid #acacac;
+                border-top-right-radius: 5px;
+                width: 44px;
+                height: 100%;
+            }
         }
     }
 }
 
+
+
+
 #cr_5{
     display: flex;
     justify-content: space-between;
-    .age{
-        outline: none;
-        border: none;
-        background-color: #f0f0f0;
-        color: #acacac;
-        border-radius: 5px;
-        padding: 10px;  
-        font-size: 18px;
-        width: calc(50% - 10px);
-    }
+    
 }
 
 .cost_find{
@@ -469,32 +542,33 @@ $trans: .3s ease;
     padding: 20px 0;
     margin-top: -25px;
     background-color: #4671d5;
-    display: flex;
     .feedback_info{
         display: flex;
         width: 60%;
         margin: auto;
     }
     .feedback_text{
-        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         color: white;
     }
     .feedback_input{
-        width: 300px;
+        margin: 20px auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-self: center;
         input{
             color: #bbb6b6;
             height: 35px;
             min-width: fit-content;
             padding: 5px 15px;
+            border: none;
         }
         input:focus{
             color: black;
+            outline: none;
         }
     }
     .feedback_button{
@@ -505,6 +579,21 @@ $trans: .3s ease;
         width: 25%;
         height: 35px;
         margin: auto;
+        
+    }
+
+    .container{
+        p{
+            color: white;
+        }
+        input{
+            color: #bbb6b6;
+            height: 35px;
+            min-width: fit-content;
+            padding: 5px 15px;
+            border: none;
+            width: 80%;
+        }
         .btn{
             height: 35px;
             text-decoration: none;
@@ -518,6 +607,11 @@ $trans: .3s ease;
             padding: 10px 25px;
         }
     }
-    
+}
+
+@media (max-width: 780px){
+    .feedback_text{
+        margin: 20px auto;
+    }
 }
 
