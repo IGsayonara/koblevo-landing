@@ -488,6 +488,7 @@ $trans: .3s ease;
             padding: 10px;  
             font-size: 18px;
             width: calc(50% - 10px);
+            margin-top: 2px;
             select{
                 color: #acacac;
                 background-color: #f0f0f0;
@@ -543,57 +544,66 @@ $trans: .3s ease;
     margin-top: -25px;
     background-color: #4671d5;
     .feedback_info{
+        margin: px 0;
         display: flex;
-        width: 60%;
-        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        .f1{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .f2f3{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            .f2{
+                display: flex;
+                justify-content: center;
+                margin: 10px 0; 
+            }
+            .f3{
+                display: flex;
+                justify-content: center;
+                margin: 10px 0;
+            }
+        }
     }
     .feedback_text{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        color: white;
+        justify-content: center;
+        height: 100%;
     }
+
     .feedback_input{
-        margin: 20px auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-self: center;
+        height: 100%;
+       // background-color: green;
         input{
+            outline: none;
             color: #bbb6b6;
             height: 35px;
-            min-width: fit-content;
             padding: 5px 15px;
             border: none;
-        }
-        input:focus{
-            color: black;
-            outline: none;
+            min-width: 250px;
         }
     }
     .feedback_button{
-        text-align: right;
-        margin: 20px 10px;
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
-        width: 25%;
-        height: 35px;
-        margin: auto;
-        
+        height: 100%;
     }
 
-    .container{
+    
         p{
             color: white;
         }
-        input{
-            color: #bbb6b6;
-            height: 35px;
-            min-width: fit-content;
-            padding: 5px 15px;
-            border: none;
-            width: 80%;
-        }
+        
         .btn{
             height: 35px;
             text-decoration: none;
@@ -603,15 +613,84 @@ $trans: .3s ease;
             border: 2px solid white;
             border-radius: 0;
             background-color: #4671d5;
-            width:fit-content;
             padding: 10px 25px;
+            max-width: 250px;
+            min-width: 250px;
+        }
+}
+
+@media (min-width: 600px){
+    .feedback_input, .feedback_button{
+        margin-top: 0px;
+        
+    }
+        .f2f3{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-height: 100px;
+            max-width: 600px;
+            min-width: 600px;
+            margin: auto;
+            .f2{
+                width: 50%;
+                margin: 0;
+            }
+            .f3{
+                width: 50%;
+                margin: 0;
+            }
+        }
+}
+
+@media (min-width: 1070px){
+
+    .feedback_info{
+        flex-wrap: wrap;
+        max-height: 50px;
+    }
+    .feedback_input, .feedback_button{
+        margin-top: 0px;
+        
+    }
+    .feedback_text{
+        p{
+            text-align: left;
         }
     }
+        .f1{
+            height: 100px;
+            padding-bottom: 45px; 
+        }
+        .f2f3{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-height: 100px;
+            max-width: 700px;
+            .f2{
+                width: 40%;
+                margin-right: 10px; 
+            }
+            .f3{
+                width: 40%;
+            }
+        }
 }
 
-@media (max-width: 780px){
-    .feedback_text{
-        margin: 20px auto;
+@media (max-width: 720px){
+    .cost{
+        min-width: 90%;
     }
 }
 
+@media (max-width: 540px){
+    .cost_form_age{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .age{
+        min-width: 100%;
+        margin-top: 10px;
+    }
+}
