@@ -311,49 +311,59 @@ $trans: .3s ease;
 
 
 .gallery{
-    .gallery_line{
-        display: flex;
-        justify-content: space-between;
-    }
-    .gallery_photo{
-        margin: 0px 5px;
-        z-index: 0;
-    }
     .row{
-        margin: 20px 0;
+        .col-md-4{
+            padding: 10px 10px;
+        }
     }    
 }
 
-
-
-
-
 .see_more{
     text-align: center;
+    
     .btn{
         padding: 10px 25px 10px 25px;
         background-color: white;
         color: $main_color;
         border: 2px solid $main_color;
         border-radius: 0;
+        min-width: 190px;
     }
     
 }
 
-
-
-.rooms_line{
-    display:flex;
-    justify-content: space-between;
+@media (max-width: 768px){
+    .gallery{
+        #r1, #r2, #r3{
+            max-width: 700px;
+            margin: auto
+        }
+    }
+}
+@media (max-width: 540px){
+    .gallery{
+        #r1, #r2, #r3{
+            max-width: 300px;
+            margin: auto
+        }
+    }
 }
 
 .room{
+    margin: 20px auto;
+    padding-bottom: 10px;
+    height: fit-content;
+    max-width: 300px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: #f0e4e4;
     display: flex;
     flex-direction: column;
     text-align: left;
+    box-shadow: 0 0 5px #acacac;
+    hr{
+        width: 100%;
+        margin: 2rem auto;
+    }
     .room_info{
         margin-top: 15px;
         .room_type{
@@ -364,6 +374,7 @@ $trans: .3s ease;
         .room_squere{
             font-size: 12px;
             margin-left: 15px;
+            color: #acacac;
         }
 
         .room_visiters{
@@ -372,10 +383,29 @@ $trans: .3s ease;
         }
     }
     .room_ul{
-        margin-left: 32px;
+        position: relative;
         ul{
-            margin-left: 15px;
-            list-style: url(ok.png);
+            max-height: 70px;
+            min-height: 70px;
+            margin-right: 10px;
+            float:right;
+            list-style-position: inside;
+            list-style-type: disc;
+            li{
+                line-height: 1.5;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                float: left;
+                span{
+                    font-size: 12px;
+                    display:list-item;
+                    list-style-type: disc;
+                    list-style: url(ul-disc.png);
+                    list-style-position: inside;
+                    padding-left:16px;
+                }
+            }
         }
     }
     .room_price{
@@ -409,6 +439,7 @@ $trans: .3s ease;
     justify-content: center;
     padding: 90px 0;     
     .cost{
+        max-width: 1200px;
         border-radius: 10px;
         background-color: white;
         padding: 25px 40px;
@@ -548,6 +579,8 @@ $trans: .3s ease;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-width: 1000px;
+        margin: auto;
         .f1{
             display: flex;
             justify-content: center;
@@ -586,8 +619,7 @@ $trans: .3s ease;
         input{
             outline: none;
             color: #bbb6b6;
-            height: 35px;
-            padding: 5px 15px;
+            padding: 10px 15px;
             border: none;
             min-width: 250px;
         }
@@ -605,7 +637,6 @@ $trans: .3s ease;
         }
         
         .btn{
-            height: 35px;
             text-decoration: none;
             font-size: 12px;
             text-transform: uppercase;
