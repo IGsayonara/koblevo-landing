@@ -4,9 +4,12 @@ import "./grid.scss";
 require ("slick-carousel/slick/slick")
 import "slick-carousel/slick/slick.scss"
 import "bootstrap-datepicker"
+import "select2"
 require ("bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css")
+require ("select2/dist/css/select2.min.css")
 
-console.log($.slick);
+
+
 
 $( document ).ready(function() {
     $('.slider').slick({
@@ -44,6 +47,15 @@ $( document ).ready(function() {
     $( function() {
         $( ".datepicker" ).datepicker();
       } );
+      $('#sel1').select2();
+      $('#sel2').select2();
+      $('#sel3').select2();
+
+      $(document).on('click', '.label_for_sel1', function (e) {
+        if (e.originalEvent) {
+          $(this).siblings('select').select2('open');    
+        } 
+      });
 });
 
 

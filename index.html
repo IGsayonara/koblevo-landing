@@ -276,21 +276,23 @@
                     <div class="cost_flex">
                         <div class="cost_row">
                             <div class="parameter">
-                                <label class="form_mark" for="cost_in2"></label>
-                                <input name="first_data" required type="text" readonly placeholder="Дата заезда:" class="datepicker" id="cost_in1"> 
+                                <label class="prefix" for="cost_in1">Дата заезда:</label>
+                                <label class="form_mark" for="cost_in1"></label>
+                                <input name="first_data" required type="text" readonly  class="datepicker" id="cost_in1"> 
                             </div>
                         </div>
                         <div class="cost_row">
                             <div class="parameter">
+                                <label class="prefix" for="cost_in2">Дата выезда:</label>
                                 <label class="form_mark" for="cost_in2"></label>
-                                <input name="second_data" required type="text" readonly placeholder="Дата выезда:" class="datepicker" id="cost_in2"> 
+                                <input name="second_data" required type="text" readonly  class="datepicker" id="cost_in2"> 
                             </div>
                         </div>
                         <div class="cost_row">
-                            <div class="parameter">
-                                    <label class="form_mark" for="sel1"></label>
+                            <div class="parameter" id="cost_3">
+                                <label class="prefix label_for_sel1" for="sel1">Количество номеров:</label>
+                                <label class="form_mark label_for_sel1" name="s1" for="sel1"></label>
                                 <select name="a_num_of_flats" required id="sel1">
-                                    <option style="display: none;" value="">Количество номеров:</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -300,21 +302,19 @@
                         </div>
                         <div class="cost_row">
                             <div class="cost_form_age">
-                                <div class="age">
+                                <div class="age" id = "cost_4">
                                     <label class="form_mark" for="sel2"></label>
-                                    <div class="select-wrap">
-                                        <select name="adults" required>
-                                            <option style="display: none;" value="" id="sel2">Взрослых:</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </div>    
+                                    <label class="prefix" for="sel2" >Взрослых:</label>
+                                    <select name="adults" required id="sel2">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>   
                                 </div>
-                                <div class="age">
-                                    <label class="form_mark" for="sel3"></label>
-                                    <select name="childrens" required>
-                                        <option style="display: none;" value="" id="sel3">Детей:</option>
+                                <div class="age" id = "cost_5">
+                                    <label class="prefix" for="sel3">Детей:</label>
+                                    <label class="form_mark" for="sel3" ></label>
+                                    <select name="childrens" required id="sel3">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -361,9 +361,37 @@
             </div>
         </div>
     </form>    
-    <map name="my_map"></map>   
+    <div class="google-map"><div class="marker" data-lat="46.628499" data-lng="46.628499"></div></div>
+    <header class="menu_header">
+        <hr> 
+        <div class="container">
+            <div class=flex_header>
+                <div class="header_logo">
+                    <img src="logo.png" alt="" id="logo" >
+                </div>
+                <div class="flex_menu">
+                    <nav class = "menu">   
+                        <li class="menu_button"><a href="" onclick="return false;">Главная</a></li>
+                        <li class="menu_button"><a href="" onclick="return false;">Галерея</a></li>
+                        <li class="menu_button"><a href="" onclick="return false;">Доступные номера</a></li>
+                        <li class="menu_button"><a href="" onclick="return false;">Узнать стоимость</a></li>
+                    </nav>
+                </div>
+                <div class="flex_contacts">
+                    <div class="contacts">
+                        <p id="phone_number"><a href="">+38 (067) 761-20-17</a></p>
+                        <p id="make_call"><a href="">Заказать звонок</a></p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </header>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://static.jcoc611.com/hosted/js/InputAffix.1.1.1.min.js"></script>     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="dist/build.js"></script>
+<script src="src/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd4RIX0PWgxzDctHS977zrpfU6pmNLgBo&callback=initMap"async defer></script>
 </body>
 </html>

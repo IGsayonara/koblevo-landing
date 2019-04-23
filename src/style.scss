@@ -5,6 +5,7 @@ html, body{
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     line-height: 1;
+    height: 1000%;
 }
 
 $main_color: #4671d5;
@@ -354,6 +355,7 @@ $trans: .3s ease;
     padding-bottom: 10px;
     height: fit-content;
     max-width: 300px;
+    min-width: 220px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     display: flex;
@@ -455,12 +457,16 @@ $trans: .3s ease;
 }
 
 .cost_flex{
+    #cost_3, #cost_4, #cost_5{
+        padding: 13px 10px;
+    }
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     .cost_row{
         margin-top: 10px;
+        width: 100%;
         .parameter{
             display: flex;
             position: relative;
@@ -473,8 +479,17 @@ $trans: .3s ease;
             border-radius: 5px;
             padding: 10px;  
             font-size: 18px;
+            .prefix{
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-width: fit-content;
+            }
             .form_mark{
+                cursor: pointer;
                 position: absolute;
+                z-index: 2;
                 right: 0;
                 top: 0;
                 background-image: url(form_mark.png);
@@ -495,6 +510,7 @@ $trans: .3s ease;
                 border: none;
             }  
             input{
+                cursor: pointer;
                 color: #acacac;
                 background-color: #f0f0f0;
                 width: 100%;
@@ -510,16 +526,17 @@ $trans: .3s ease;
             justify-content: space-between;
         }
         .age{
+            display: flex;
             position: relative;
-            outline: none;
+            user-select: none;
             border: none;
+            outline: none;
+            width: calc(50% - 10px);
             background-color: #f0f0f0;
             color: #acacac;
             border-radius: 5px;
             padding: 10px;  
             font-size: 18px;
-            width: calc(50% - 10px);
-            margin-top: 2px;
             select{
                 color: #acacac;
                 background-color: #f0f0f0;
@@ -532,6 +549,8 @@ $trans: .3s ease;
             }
             .form_mark{
                 position: absolute;
+                z-index: 2;
+                cursor: pointer;
                 right: 0;
                 top: 0;
                 background-image: url(form_mark.png);
@@ -543,9 +562,26 @@ $trans: .3s ease;
                 width: 44px;
                 height: 100%;
             }
+            .prefix{
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-width: fit-content;
+                max-width: fit-content;
+            }
         }
     }
 }
+
+.select2-container--default  .select2-selection--single .select2-selection__rendered {
+    background-color: #f0f0f0;
+    border: none;
+    outline: none;
+    color: inherit;
+}
+
+
 
 
 
@@ -712,7 +748,7 @@ $trans: .3s ease;
 @media (max-width: 720px){
     .cost{
         min-width: 90%;
-    }
+   }    
 }
 
 @media (max-width: 540px){
@@ -724,4 +760,12 @@ $trans: .3s ease;
         min-width: 100%;
         margin-top: 10px;
     }
+    .parameter{
+        min-width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+.google-map{
+    height: 450px;
 }
