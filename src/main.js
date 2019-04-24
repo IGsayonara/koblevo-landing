@@ -5,23 +5,52 @@ require ("slick-carousel/slick/slick")
 import "slick-carousel/slick/slick.scss"
 import "bootstrap-datepicker"
 import "select2"
-require ("bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css")
+//require ("bootstrap-datepicker/dist/css/bootstrap-datepicker.css")
 require ("select2/dist/css/select2.min.css")
+require ("bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.min.css")
 
 
 
 
 $( document ).ready(function() {
-    $('.slider').slick({
-        dots: true,
-        arrows: false,
-        autoplay: false,
-        infinite: true,
-        autoplaySpeed: 5000,
-    });
+   
 
     var is_open = false;
     var see_more_width;
+
+    var $sliderPrimary =  $('.slider').slick({
+      dots: true,
+      arrows: false,
+      autoplay: false,
+      infinite: true,
+      autoplaySpeed: 5000,
+      centerPadding: '40px',
+  });
+ 
+ 
+    absFormPosCenter(
+        $sliderPrimary.siblings().find('.form-wrap'),
+        $sliderPrimary,
+        'bottom',
+        // $sliderPrimary.find('.slick-dots')
+    );
+    window.addEventListener('resize',function () {
+        absFormPosCenter(
+            $sliderPrimary.siblings().find('.form-wrap'),
+            $sliderPrimary,
+            'bottom',
+            // $sliderPrimary.find('.slick-dots')
+        );
+    });
+ 
+    function absFormPosCenter(itemToPlace,itemToPlaceIn,positionFrom,disturbingElem) {
+        var disturbingHeight = disturbingElem !== undefined ? disturbingElem.height() : 0;console.log("f")
+        if($(window).width() > 990){
+            itemToPlace.css(positionFrom,(itemToPlaceIn.height() - itemToPlace.height())/2 + disturbingHeight + 20 + 'px')
+        } else {
+            itemToPlace.css(positionFrom,'auto');
+        }
+    }
 
     $(".see_more").click(function(){
         if (is_open == false){ 
@@ -44,6 +73,8 @@ $( document ).ready(function() {
         }
     });
 
+
+
     $( function() {
         $( ".datepicker" ).datepicker();
       } );
@@ -52,6 +83,16 @@ $( document ).ready(function() {
       $('#sel3').select2();
 
       $(document).on('click', '.label_for_sel1', function (e) {
+        if (e.originalEvent) {
+          $(this).siblings('select').select2('open');    
+        } 
+      });
+      $(document).on('click', '.label_for_sel2', function (e) {
+        if (e.originalEvent) {
+          $(this).siblings('select').select2('open');    
+        } 
+      });
+      $(document).on('click', '.label_for_sel3', function (e) {
         if (e.originalEvent) {
           $(this).siblings('select').select2('open');    
         } 

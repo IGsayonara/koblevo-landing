@@ -13,7 +13,7 @@
 </head>
 <body>
     <header class="menu_header">
-        <hr> 
+        <hr class="hr_m"> 
         <div class="container">
             <div class=flex_header>
                 <div class="header_logo">
@@ -38,9 +38,42 @@
     </header>
     <div id="zone">
         <div class="slider_zone">  
+            
+            <div class="slider">
+                <div>
+                    <div id="sl_1" class="sl_item" style="background-image:url('sl_1.png')">
+                        <div class="container">
+                            <div class="slider_text">
+                                <h1>Парк Отель “Берёзка”</h1>
+                                <h2>Забронируйте номер онлайн или по номеру телефона <p>+38 (067) 761-20-17</p></h2>
+                            </div> 
+                        </div>   
+                    </div>
+                </div>
+                <div>
+                    <div id="sl_1" class="sl_item" style="background-image:url('sl_1.png')">
+                        <div class="container">
+                            <div class="slider_text">
+                                <h1>Парк Отель “Берёзка”</h1>
+                                <h2>Забронируйте номер онлайн или по номеру телефона <p>+38 (067) 761-20-17</p></h2>
+                            </div> 
+                        </div>   
+                    </div>
+               </div>
+               <div>
+                    <div id="sl_1" class="sl_item" style="background-image:url('sl_1.png')">
+                            <div class="container">
+                                <div class="slider_text">
+                                    <h1>Парк Отель “Берёзка”</h1>
+                                    <h2>Забронируйте номер онлайн или по номеру телефона <p>+38 (067) 761-20-17</p></h2>
+                                </div> 
+                            </div>   
+                        </div>
+                    </div>
+                </div>
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4 offset-md-8">
+                <div class="form-wrapper">
+                    <div class="slider_form_pos form-wrap">
                         <form class="slider_form" action="handler.php">
                             <div>
                                 <h2>Оставьте запрос на лучшую</h2>
@@ -51,30 +84,7 @@
                             <div class="slider_form_button"><button class="btn btn-primary" type="submit">Хочу на море!</button></div>
                         </form>
                     </div>
-                </div>
-            </div>
-            <div class="slider">
-                <div id="sl_1" class="sl_item">
-                    <div class="slider_text">
-                        <h1>Парк Отель “Берёзка”</h1>
-                        <h2>Забронируйте номер онлайн или по номеру телефона <span>+38 (067) 761-20-17</span></h2>
-                    </div>    
-                    <img src="sl_1.png" alt="">
-                </div>
-                <div id="sl_2" class="sl_item">
-                    <div class="slider_text">
-                        <h1>Я Игорь, а Что?</h1>
-                        <h2>Забронируйте номер онлайн или по номеру телефона <span>+38 (067) 761-20-17</span></h2>
-                    </div> 
-                    <img src="sl_1.png" alt="">
-                </div>
-                <div id="sl_3" class="sl_item">
-                    <div class="slider_text">
-                        <h1>Мы вам не верим!!!</h1>
-                        <h2>Забронируйте номер онлайн или по номеру телефона <span>+38 (067) 761-20-17</span></h2>
-                    </div> 
-                    <img src="sl_1.png" alt="">
-                </div>
+                </div>   
             </div>
         </div>
         <div class="margin_50">
@@ -303,8 +313,8 @@
                         <div class="cost_row">
                             <div class="cost_form_age">
                                 <div class="age" id = "cost_4">
-                                    <label class="form_mark" for="sel2"></label>
-                                    <label class="prefix" for="sel2" >Взрослых:</label>
+                                    <label class="form_mark label_for_sel2" for="sel2"></label>
+                                    <label class="prefix label_for_sel2" for="sel2" >Взрослых:</label>
                                     <select name="adults" required id="sel2">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -312,8 +322,8 @@
                                     </select>   
                                 </div>
                                 <div class="age" id = "cost_5">
-                                    <label class="prefix" for="sel3">Детей:</label>
-                                    <label class="form_mark" for="sel3" ></label>
+                                    <label class="prefix label_for_sel3" for="sel3">Детей:</label>
+                                    <label class="form_mark label_for_sel3" for="sel3" ></label>
                                     <select name="childrens" required id="sel3">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -362,7 +372,7 @@
         </div>
     </form>    
     <div class="google-map"><div class="marker" data-lat="46.628499" data-lng="46.628499"></div></div>
-    <footer class="menu_header footer">
+    <div class="menu_header footer">
             <div class="container">
             <div class=flex_header>
                 <div class="header_logo">
@@ -378,43 +388,45 @@
                 </div>
             </div>
         </div> 
-        <hr>
-        
-        
-       
-    </footer>
-
-    <div class="footer_info">
-        <div class="f111">
-            <div class="footer_text">Наш адрес:</div>
-            <div class="footer_icon">
-                <div class="icon_img"><img src="src/ok.png" alt=""></div>
-                <div class="icon_text">57454. Николаевская обл., Курорт Коблево, ул.Кишинёвская, 1.</div>
-            </div>
-        </div>
-        <div class="f111">
-            <div class="footer_text">Наш адрес:</div>
-            <div class="footer_icon">
-                <div class="icon_img"><img src="src/ok.png" alt=""></div>
-                <div class="icon_text">57454. Николаевская обл., Курорт Коблево, ул.Кишинёвская, 1.</div>
-            </div>
-        </div>
-        <div class="f111">
-            <div class="footer_text">Наш адрес:</div>
-            <div class="footer_icon">
-                <div class="icon_img"><img src="src/ok.png" alt=""></div>
-                <div class="icon_text">57454. Николаевская обл., Курорт Коблево, ул.Кишинёвская, 1.</div>
-            </div>
-        </div>
-        <div class="f111">
-            <div class="footer_text">Наш адрес:</div>
-            <div class="footer_icon">
-                <div class="icon_img"><img src="src/ok.png" alt=""></div>
-                <div class="icon_text">57454. Николаевская обл., Курорт Коблево, ул.Кишинёвская, 1.</div>
-            </div>
-        </div>
-        
+        <hr class="hr_m">
     </div>
+    <footer>
+        <div class="footer_info row">
+            <div class="f111 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer_text">Наш адрес:</div>
+                <div class="footer_icon">
+                    <div class="icon_img" id="fi_1"><img src="src/ok.png" alt="" ></div>
+                    <div class="icon_text">57454. <p>Николаевская обл.,</p> <p>Курорт Коблево,</p> <p>ул.Кишинёвская, 1.</p></div>
+                </div>
+            </div>
+            <div class="f111 col-sm-6 col-md-3 col-lg-3">
+                <div class="footer_text">Позвоните нам:</div>
+                <div class="footer_icon">
+                    <div class="icon_img"><img src="src/ok.png" alt=""></div>
+                    <div class="icon_text"><p>+ 38 (067) 761-20-17</p></div>
+                </div>
+            </div>
+            <div class="f111 col-sm-6 col-md-4 col-lg-4">
+                <div class="footer_text">Напишите нам:</div>
+                <div class="footer_icon">
+                    <div class="icon_img"><img src="src/ok.png" alt=""></div>
+                    <div class="icon_text">koblevo.sales@gmail.com</div>
+                </div>
+            </div>
+            <div class="f111 col-sm-6 col-md-2 col-lg-2">
+                <div class="footer_text">Мы в соцсетях:</div>
+                <div class="footer_icon" >
+                    <div class="icon_img" id="fi_4">
+                        <img src="src/ok.png" alt="">
+                        <img src="src/ok.png" alt="">
+                        <img src="src/ok.png" alt="">
+                    </div>
+                    <div class="icon_text"></div>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
     
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://static.jcoc611.com/hosted/js/InputAffix.1.1.1.min.js"></script>     
@@ -422,6 +434,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="dist/build.js"></script>
 <script src="src/map.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd4RIX0PWgxzDctHS977zrpfU6pmNLgBo&callback=initMap"async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJbyDAkO2KOUNCnVu8qTjbTgwSzN3jk1k&callback=initMap"async defer></script>
 </body>
 </html>
