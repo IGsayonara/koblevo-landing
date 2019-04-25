@@ -267,6 +267,13 @@ $(document).ready(function () {
         });
     });
 
+    $('[data-scrollTo]').on('click', function (event) {
+        event.preventDefault();
+        let el = $(this).attr('data-scrollTo');
+        $("html, body").animate({
+            scrollTop: $(el).offset().top
+        }, 1000);
+    });
 
 
     (function () {
