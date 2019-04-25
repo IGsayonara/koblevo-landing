@@ -1,0 +1,5 @@
+.box{
+  transition: padding var(--trans);
+
+  padding: var(--box-ptb) 0;
+}
