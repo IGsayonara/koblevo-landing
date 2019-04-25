@@ -228,35 +228,53 @@
     <section class="box gallery">
         <div class="container">
             <div class="row">
-                <div class="col-md-4"><a href="">
-                    <div class="gallery_photo"><img src="images/photo1.png" alt="" width="100%"></div>
-                </a></div>
-                <div class="col-md-4"><a href="">
-                    <div class="gallery_photo"><img src="images/photo2.png" alt="" width="100%"></div>
-                </a></div>
-                <div class="col-md-4"><a href="">
-                    <div class="gallery_photo"><img src="images/photo3.png" alt="" width="100%"></div>
-                </a></div>
+                <div class="col-md-4">
+                    <a href="./images/photo1.png" class="gallery_photo">
+                        <img src="images/photo1.png" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="./images/photo1.png" class="gallery_photo">
+                        <img src="images/photo2.png" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="./images/photo1.png" class="gallery_photo">
+                        <img src="images/photo3.png" alt="">
+                    </a>
+                </div>
             </div>
             <div class="row" id="seeMoreImages_content" style="display: none">
-                <div class="col-md-4"><a href="">
-                    <div class="gallery_photo"><img src="images/photo1.png" alt="" width="100%"></div>
-                </a></div>
-                <div class="col-md-4"><a href="">
-                    <div class="gallery_photo"><img src="images/photo2.png" alt="" width="100%"></div>
-                </a></div>
-                <div class="col-md-4"><a href="">
-                    <div class="gallery_photo"><img src="images/photo3.png" alt="" width="100%"></div>
-                </a></div>
-                <div class="col-md-4"><a href="">
-                    <div class="gallery_photo"><img src="images/photo1.png" alt="" width="100%"></div>
-                </a></div>
-                <div class="col-md-4"><a href="">
-                    <div class="gallery_photo"><img src="images/photo2.png" alt="" width="100%"></div>
-                </a></div>
-                <div class="col-md-4"><a href="">
-                    <div class="gallery_photo"><img src="images/photo3.png" alt="" width="100%"></div>
-                </a></div>
+                <div class="col-md-4">
+                    <a href="./images/photo1.png" class="gallery_photo">
+                        <img src="images/photo1.png" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="./images/photo1.png" class="gallery_photo">
+                        <img src="images/photo2.png" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="./images/photo1.png" class="gallery_photo">
+                        <img src="images/photo3.png" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="./images/photo1.png" class="gallery_photo">
+                        <img src="images/photo1.png" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="./images/photo1.png" class="gallery_photo">
+                        <img src="images/photo2.png" alt="">
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="./images/photo1.png" class="gallery_photo">
+                        <img src="images/photo3.png" alt="">
+                    </a>
+                </div>
             </div>
             <!-- /.row -->
 
@@ -298,7 +316,7 @@
                             </ul>
                             <div class="room_price">от 968 грн</div>
                             <div class="room_button">
-                                <button class="btn btn-primary">Бронировать</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#getDetailsModal">Бронировать</button>
                             </div>
                         </div>
                         <!-- /.descr -->
@@ -326,7 +344,7 @@
                             </ul>
                             <div class="room_price">от 1398 грн</div>
                             <div class="room_button">
-                                <button class="btn btn-primary">Бронировать</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#getDetailsModal">Бронировать</button>
                             </div>
                         </div>
                         <!-- /.descr -->
@@ -355,7 +373,7 @@
                             </ul>
                             <div class="room_price">от 888 грн</div>
                             <div class="room_button">
-                                <button class="btn btn-primary">Бронировать</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#getDetailsModal">Бронировать</button>
                             </div>
                         </div>
                         <!-- /.descr -->
@@ -382,7 +400,7 @@
                             </ul>
                             <div class="room_price">от 2098 грн</div>
                             <div class="room_button">
-                                <button class="btn btn-primary">Бронировать</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#getDetailsModal">Бронировать</button>
                             </div>
                         </div>
                         <!-- /.descr -->
@@ -392,6 +410,49 @@
             </div>
         </div>
     </section>
+    <div class="modal fade" id="getDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">+</span>
+                </button>
+
+                <form class="detailsModal_form" id="getDetailsModal_form" action="" method="post">
+                    <div class="heading heading-h3 heading-center heading-mb-big">
+                        <h2 class="heading_title">
+                            Узнайте наличие номера
+                            и актуальную цену
+                        </h2>
+                    </div>
+                    <!-- /.heading -->
+
+                    <div class="input-wrap">
+                        <label for="detailsModal_descr">Ваше имя, даты отдыха и кол-во человек</label>
+                        <textarea name="" id="detailsModal_descr" cols="30" rows="10"></textarea>
+                        <!-- /# -->
+                    </div>
+                    <!-- /.input-wrap -->
+
+                    <div class="input-wrap">
+                        <label for="detailsModal_tel">Номер телефона</label>
+                        <input type="text" id="detailsModal_tel">
+                        <!-- /#detailsModal_descr -->
+                    </div>
+                    <!-- /.input-wrap -->
+
+
+                    <div class="text-center">
+                        <button class="btn">
+                            ОТПРАВИТЬ
+                        </button>
+                        <!-- /.btn -->
+                    </div>
+                    <!-- /.text-center -->
+
+                </form>
+            </div>
+        </div>
+    </div>
 
     <section class="box" style="background-image: url('./images/form-bg.jpg')">
         <div class="container">

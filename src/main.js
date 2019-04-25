@@ -8,7 +8,12 @@ import "select2"
 require("select2/dist/css/select2.min.css");
 
 import 'hamburgers'
-require ("hamburgers/dist/hamburgers.min.css")
+require ("hamburgers/dist/hamburgers.min.css");
+
+import 'magnific-popup'
+require ("magnific-popup/dist/magnific-popup.css")
+
+import './js/modal'
 
 import './css/index.scss'
 
@@ -194,7 +199,6 @@ $(document).ready(function () {
     }
 
     $('#seeMoreImages_btn').click(function () {
-        // $(this).data-text-toggle
         $('#seeMoreImages_content').toggle('fast');
     });
 
@@ -203,34 +207,35 @@ $(document).ready(function () {
         $('#burger-content').toggleClass('is-active');
     });
 
-
-
-    $(".datepicker").datepicker();
-
-    $('#sel1').select2();
-    $('#sel2').select2();
-    $('#sel3').select2();
-
-    $(document).on('click', '.label_for_sel1', function (e) {
-        if (e.originalEvent) {
-            $(this).siblings('select').select2('open');
+    // $('.gallery_photo').magnificPopup({type:'image'});
+    $('.gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Загрузка #%curr%...',
+        tClose: 'Закрыть',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            tPrev: 'Пред.',
+            tNext: 'След.',
+            tCounter: '%curr% из %total%',
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1]
+        },
+        image: {
+            tError: 'Ошибка при загрузке <a href="%url%">фото #%curr%</a>.',
+            // titleSrc: function(item) {
+            //     return item.el.attr('title') + '<small>Фотогалерея</small>';
+            // }
+        },
+        ajax: {
+            tError: 'Ошибка при загрузке <a href="%url%">фото #%curr%</a>.',
         }
     });
-    $(document).on('click', '.label_for_sel2', function (e) {
-        if (e.originalEvent) {
-            $(this).siblings('select').select2('open');
-        }
-    });
-    $(document).on('click', '.label_for_sel3', function (e) {
-        if (e.originalEvent) {
-            $(this).siblings('select').select2('open');
-        }
-    });
 
-
-    $('.slider_form form,#feedback_zone').submit(function (e) {
+    $('.slider_form form,#feedback_zone,#getDetailsModal_form').submit(function (e) {
         e.preventDefault();
-        console.log( e );
+        // console.log( e );
         $(this).parent().addClass('disabledDiv');
 
         $.ajax({
@@ -258,6 +263,61 @@ $(document).ready(function () {
 
 
 
+    (function () {
+        class Handler {
+            constructor(elem) {
+                this.el = elem;
+                this.label = this.el.querySelector('label');
+                this.input = this.el.querySelector('input,textarea');
+
+                this.activeHtmlClass = 'active';
+            }
+
+            getValue() {
+                return this.input.value
+            }
+
+            focus() {
+                this.el.classList.add(this.activeHtmlClass)
+            }
+
+            blur() {
+                if (this.getValue().length === 0) {
+                    this.el.classList.remove(this.activeHtmlClass)
+                }
+            }
+
+            addListeners() {
+                this.input.addEventListener('focus', this.focus.bind(this));
+                this.input.addEventListener('change', this.focus.bind(this));
+                this.input.addEventListener('blur', this.blur.bind(this));
+            }
+
+            removeListeners() {
+                this.input.removeEventListener('focus', this.focus);
+                this.input.removeEventListener('blur', this.blur);
+            }
+
+            init() {
+                // console.log( this.input,this.label );
+                // console.log( this.input.value );
+
+                if(this.input){
+                    this.addListeners();
+                    if (this.getValue().length > 0) {
+                        this.focus();
+                    }
+                } else {
+                    this.el.classList.add('not-actual-input');
+                }
+
+            }
+        }
+
+        document.querySelectorAll('.input-wrap').forEach((el) => {
+            new Handler(el).init()
+        })
+    })();
 });
 
 

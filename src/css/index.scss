@@ -1,5 +1,6 @@
 $color-main: #4671d5;
 $trans: .3s ease;
+$modal-open: '.modal-open';
 
 :root{
   --box-ptb: 7vh;
@@ -13,9 +14,10 @@ $trans: .3s ease;
     --box-ptb: 8vh;
   }
   @media (min-width: 1200px){
-    --box-ptb: 10vh;
+    --box-ptb: 8vh;
   }
   --trans: .3s ease;
+  --c-highlight: #4671d5;
 
 }
 
@@ -41,6 +43,13 @@ html, body {
   font-size: 14px;
   line-height: 1.2;
   font-weight: 500;
+  &#{$modal-open}{
+    overflow: hidden;
+    position: relative;
+    @media screen and (min-width: 768px){
+      padding-right: 15px;
+    }
+  }
 }
 
 
@@ -312,6 +321,7 @@ header.header{
     }
 
 
+    padding: 2vh 0;
     border: {
       width: 0 0 1px;
       style: solid;
@@ -413,6 +423,199 @@ header.header{
   }
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  #{$modal-open} & {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  transition: all .3s;
+  background: rgba(0,0,0,.3);
+
+  opacity: 0;
+  visibility: hidden;
+
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+
+  &.show{
+    opacity: 1;
+    visibility: visible;
+    .modal-dialog{
+      transform: translateY(0);
+    }
+  }
+
+
+
+  .modal-dialog {
+    transform: translateY(-50px);
+
+    transition: all var(--trans);
+
+    margin: 10vh auto;
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    //color: black;
+
+    border: {
+      width: 1px;
+      style: solid;
+      color: #CCCFD4;
+    }
+
+    position: relative;
+
+    .close{
+      position: absolute;
+      border: 0;
+      background: 0;
+      color: black;
+
+      top: 6px;
+      right: 6px;
+
+      font-size: 22px;
+      line-height: 14px;
+
+      padding: 0;
+      margin: 0;
+
+      cursor: pointer;
+      transform: rotate(45deg);
+
+      transition: all var(--trans);
+      &:hover{
+        filter: alpha(opacity=50);
+        opacity: .5;
+        transform: rotate(135deg);
+      }
+    }
+
+    .modal-content{
+      >iframe,
+      >video{
+        max-width: 100%;
+        border: 0;
+      }
+
+    }
+  }
+}
+
+.detailsModal_form{
+
+  .input-wrap{
+    position: relative;
+    width: 100%;
+    display: block;
+
+    --label-h: 14px;
+    --c-text-ignore: #a7a7a7;
+    padding: var(--label-h) 0 0;
+    margin: 0 0 5px;
+    &.not-actual-input,
+    &.active{
+      label{
+        //transform: translateY(0);
+        top: 0;
+        left: 0;
+        font-size: var(--label-h);
+        color: var(--c-text-ignore);
+      }
+    }
+    @mixin textStyle(){
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: #acacac;
+      line-height: 1;
+    }
+    label{
+      cursor: text;
+      position: absolute;
+      top: calc(var(--label-h) + 5px);
+      left: 5px;
+      z-index: 0;
+
+      @include textStyle();
+
+      margin: 0;
+      padding: 0;
+
+      white-space: nowrap;
+
+      transition: all var(--trans);
+
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      font-size: 1rem;
+      .required{
+        color: var(--c-highlight);
+      }
+    }
+    textarea{
+      min-height: 100px;
+      resize: vertical;
+    }
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"]{
+      width: 100%;
+      z-index: 1;
+      background-color: #f0f0f0;
+
+      @include textStyle();
+
+      border: {
+        width: 0;
+        radius: 3px;
+      };
+      padding: 5px 0;
+
+      &::placeholder{
+        opacity: 0;
+      }
+    }
+
+  }
+
+  .btn{
+    margin: 15px 0 0;
+    transition: all var(--trans);
+    border:{
+      width: 2px;
+      style: solid;
+      color: #e7a300;
+    }
+    background-color: #e7a300;
+    color: white;
+
+    padding: 12px 20px;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover{
+      background-color: white;
+      color: #e7a300;
+    }
+  }
+}
 
 
 
@@ -435,6 +638,11 @@ header.header{
     &:hover{
       background-color: $color-main;
       color: white;
+    }
+  }
+  .gallery_photo{
+    img{
+      max-width: 100%;
     }
   }
 }
