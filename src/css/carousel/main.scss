@@ -1,0 +1,23 @@
+.slick-carousel_main {
+  position: relative;
+
+  .carousel-elem{
+    padding: 0;
+    .slide{
+      padding: 15vh 0;
+      text-align: left;
+      h1 {
+        font-weight: bold;
+        font-size: 40px;
+        color: white;
+      }
+
+      h2 {
+        font-weight: 400;
+        font-size: 16px;
+        margin-top: 50px;
+        color: white;
+      }
+    }
+  }
+}
