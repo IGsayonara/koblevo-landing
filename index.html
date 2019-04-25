@@ -4,16 +4,11 @@
     <meta charset="utf-8">
     <title>6ерёзка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="src/slick/slick.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&amp;subset=cyrillic"
           rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
+
 <header class="header">
     <div class="header-desktop">
         <div class="topline">
@@ -22,9 +17,9 @@
         <!-- /.topline -->
         <div class="container">
             <div class="midline">
-                <div class="logo-wrap">
+                <a href="" class="logo-wrap">
                     <img src="images/logo.png" alt="">
-                </div>
+                </a>
                 <!-- /.logo-wrap -->
                 <nav class="nav-menu">
                     <ul>
@@ -45,22 +40,79 @@
         <!-- /.container -->
     </div>
     <!-- /.header-desktop -->
-    <div class="header-mobile">
+    <div class="header-mobile" style="background-image: url('./images/photo1.png')">
+        <div class="header-mobile-burger-wrap">
+            <a href="" class="logo-wrap">
+                <img src="images/logo.png" alt="">
+            </a>
 
+            <button id="burger" class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+        <div class="header-mobile-absolute" id="burger-content" style="background-image: url('./images/photo1.png')">
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="">Главная</a></li>
+                    <li><a href="">Галерея</a></li>
+                    <li><a href="">Доступные номера</a></li>
+                    <li><a href="">Узнать стоимость</a></li>
+                </ul>
+            </nav>
+            <div class="contacts">
+                <a class="tel" href="tel:+38 (067) 761-20-17">+38 (067) 761-20-17</a>
+                <!--<a class="text" href="">Заказать звонок</a>-->
+            </div>
+
+        </div>
+        <div class="header-mobile-content">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="text-wrap">
+                        <div class="heading heading-h1 heading-left heading-mb-big">
+                            <h2 class="heading_title">
+                                Почему Парк Отель Берёзка бронируют с нами
+                            </h2>
+                        </div>
+                        <!-- /.heading -->
+                        <p>Забронируйте онлайн
+                            или по номеру телефона
+                            <a href="tel:+38 (067) 761-20-17">+38 (067) 761-20-17</a></p>
+                        <!-- /.text -->
+                    </div>
+                </div>
+                <!-- /.col-md-6 -->
+                <div class="col-md-6">
+                    <div class="slider_form">
+                        <form class="" action="#" method="post">
+                            <div>
+                                <h2>Оставьте запрос на лучшую</h2>
+                                <h2>цену кемпинг "Альянс"</h2>
+                            </div>
+                            <div class="slider_form_name"><textarea name="sl_info" required="" wrap="hard"
+                                                                    placeholder="Ваше имя, количество человек и даты"></textarea>
+                            </div>
+                            <div class="slider_form_phone"><input name="sl_phone" required="" type="tel" maxlength="16"
+                                                                  placeholder="Ваш телефон/viber"></div>
+                            <div class="slider_form_button">
+                                <button class="btn btn-primary" type="submit">Хочу на море!</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.slider_form -->
+
+                </div>
+                <!-- /.col-md-6 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.header-mobile-content -->
     </div>
     <!-- /.header-mobile -->
-    <div class="topline">
-
-    </div>
-    <!-- /.topline -->
-    <div class="container">
-        <div class="flex_header">
-            <div class="flex_contacts">
-
-            </div>
-        </div>
-    </div>
 </header>
+
 <main>
     <section class="slider-main_wrap">
         <div class="slick-carousel slides-full-height slick-carousel_main">
@@ -98,20 +150,23 @@
         <div class="container">
             <div class="form-wrapper">
                 <div class="slider_form_pos form-wrap">
-                    <form class="slider_form">
-                        <div>
-                            <h2>Оставьте запрос на лучшую</h2>
-                            <h2>цену кемпинг "Альянс"</h2>
-                        </div>
-                        <div class="slider_form_name"><textarea id="ta1" name="sl_info" required wrap="hard"
-                                                                placeholder="Ваше имя, количество человек и даты"></textarea>
-                        </div>
-                        <div class="slider_form_phone"><input id="in2" name="sl_phone" required type="tel"
-                                                              maxlength="16" placeholder="Ваш телефон/viber"></div>
-                        <div class="slider_form_button">
-                            <button class="btn btn-primary" type="submit">Хочу на море!</button>
-                        </div>
-                    </form>
+                    <div class="slider_form">
+                        <form class="" action="#" method="post">
+                            <div>
+                                <h2>Оставьте запрос на лучшую</h2>
+                                <h2>цену кемпинг "Альянс"</h2>
+                            </div>
+                            <div class="slider_form_name"><textarea name="sl_info" required wrap="hard"
+                                                                    placeholder="Ваше имя, количество человек и даты"></textarea>
+                            </div>
+                            <div class="slider_form_phone"><input name="sl_phone" required type="tel"
+                                                                  maxlength="16" placeholder="Ваш телефон/viber"></div>
+                            <div class="slider_form_button">
+                                <button class="btn btn-primary" type="submit">Хочу на море!</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.slider_form -->
                 </div>
             </div>
         </div>
@@ -170,321 +225,348 @@
         <!-- /.container -->
     </section>
 
+    <section class="box gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><a href="">
+                    <div class="gallery_photo"><img src="images/photo1.png" alt="" width="100%"></div>
+                </a></div>
+                <div class="col-md-4"><a href="">
+                    <div class="gallery_photo"><img src="images/photo2.png" alt="" width="100%"></div>
+                </a></div>
+                <div class="col-md-4"><a href="">
+                    <div class="gallery_photo"><img src="images/photo3.png" alt="" width="100%"></div>
+                </a></div>
+            </div>
+            <div class="row" id="seeMoreImages_content" style="display: none">
+                <div class="col-md-4"><a href="">
+                    <div class="gallery_photo"><img src="images/photo1.png" alt="" width="100%"></div>
+                </a></div>
+                <div class="col-md-4"><a href="">
+                    <div class="gallery_photo"><img src="images/photo2.png" alt="" width="100%"></div>
+                </a></div>
+                <div class="col-md-4"><a href="">
+                    <div class="gallery_photo"><img src="images/photo3.png" alt="" width="100%"></div>
+                </a></div>
+                <div class="col-md-4"><a href="">
+                    <div class="gallery_photo"><img src="images/photo1.png" alt="" width="100%"></div>
+                </a></div>
+                <div class="col-md-4"><a href="">
+                    <div class="gallery_photo"><img src="images/photo2.png" alt="" width="100%"></div>
+                </a></div>
+                <div class="col-md-4"><a href="">
+                    <div class="gallery_photo"><img src="images/photo3.png" alt="" width="100%"></div>
+                </a></div>
+            </div>
+            <!-- /.row -->
 
+            <div class="text-center mt-5">
+                <button id="seeMoreImages_btn" type="button" class="btn-see-more" data-text-toggle="Скрыть">Смотреть все
+                    фото
+                </button>
+            </div>
+            <!-- /.text-center -->
+        </div>
+    </section>
 
-</main>
-<div class="box gallery">
-    <div class="container">
-        <div class="row" id="r1">
-            <div class="col-md-4"><a href="">
-                <div class="gallery_photo"><img src="images/photo1.png" alt="" width="100%"></div>
-            </a></div>
-            <div class="col-md-4"><a href="">
-                <div class="gallery_photo"><img src="images/photo2.png" alt="" width="100%"></div>
-            </a></div>
-            <div class="col-md-4"><a href="">
-                <div class="gallery_photo"><img src="images/photo3.png" alt="" width="100%"></div>
-            </a></div>
-        </div>
-    </div>
-</div>
-<div class="box">
-    <div class="see_more">
-        <button type="button" class="btn btn-primary">Смотреть все фото</button>
-    </div>
-</div>
+    <section class="box">
+        <div class="container">
+            <div class="heading heading-h3 heading-center heading-mb-big">
+                <h2 class="heading_title">
+                    Доступные номера
+                </h2>
+            </div>
+            <!-- /.heading -->
+            <div class="row">
+                <div class="col-12 col-lg-3 col-sm-6">
+                    <div class="room">
+                        <div class="room_img">
+                            <a href=""><img src="images/room1.png" alt="" width="100%" height="100%"></a>
+                        </div>
+                        <div class="descr">
+                            <div class="room_info">
+                                <h3 class="room_type">Стандарт 2х-местный</h3>
+                                <p class="room_squere">Площадь: 14 м²</p>
+                                <p class="room_visiters">Кол-во спальных мест: 2</p>
+                            </div>
+                            <ul class="room_ul">
+                                <li><span>WiFi</span></li>
+                                <li><span>Кондиционер</span></li>
+                                <li><span>Балкон</span></li>
+                                <li><span>Санузел</span></li>
+                                <li><span>Холодильник</span></li>
+                            </ul>
+                            <div class="room_price">от 968 грн</div>
+                            <div class="room_button">
+                                <button class="btn btn-primary">Бронировать</button>
+                            </div>
+                        </div>
+                        <!-- /.descr -->
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-sm-6">
+                    <div class="room">
+                        <div class="room_img">
+                            <a href=""><img src="images/room2.png" alt="" width="100%" height="100%"></a>
+                        </div>
+                        <div class="descr">
+                            <div class="room_info">
+                                <h3 class="room_type">Стандарт 3х-местный</h3>
+                                <p class="room_squere">Площадь: 14 м²</p>
+                                <p class="room_visiters">Кол-во спальных мест: 3</p>
+                            </div>
+                            <ul class="room_ul">
+                                <li><span>WiFi</span></li>
+                                <li><span>Кондиционер</span></li>
+                                <li><span>Балкон</span></li>
+                                <li><span>Санузел</span></li>
+                                <li><span>Холодильник</span></li>
+                                <li><span>Cейф</span></li>
+                                <li><span>Чайник</span></li>
+                            </ul>
+                            <div class="room_price">от 1398 грн</div>
+                            <div class="room_button">
+                                <button class="btn btn-primary">Бронировать</button>
+                            </div>
+                        </div>
+                        <!-- /.descr -->
 
-<div class="box">
-    <div class="container">
-        <div class="heading heading-h3 heading-center heading-mb-big">
-            <h2 class="heading_title">
-                Доступные номера
-            </h2>
-        </div>
-        <!-- /.heading -->
-        <div class="row">
-            <div class="col-12 col-lg-3 col-sm-6">
-                <div class="room">
-                    <div class="room_img">
-                        <a href=""><img src="images/room1.png" alt="" width="100%" height="100%"></a>
-                    </div>
-                    <div class="room_info">
-                        <h3 class="room_type">Стандарт 2х-местный</h3>
-                        <p class="room_squere">Площадь: 14 м²</p>
-                        <p class="room_visiters">Кол-во спальных мест: 2</p>
-                    </div>
-                    <hr>
-                    <div class="room_ul">
-                        <ul>
-                            <li><span>WiFi</span></li>
-                            <li><span>Кондиционер</span></li>
-                            <li><span>Балкон</span></li>
-                            <li><span>Санузел</span></li>
-                            <li><span>Холодильник</span></li>
-                        </ul>
-                    </div>
-                    <div class="room_price">
-                        <p>от 968 грн</p>
-                    </div>
-                    <div class="room_button">
-                        <button class="btn btn-primary">Бронировать</button>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-lg-3 col-sm-6">
-                <div class="room">
-                    <div class="room_img">
-                        <a href=""><img src="images/room2.png" alt="" width="100%" height="100%"></a>
-                    </div>
-                    <div class="room_info">
-                        <h3 class="room_type">Стандарт 3х-местный</h3>
-                        <p class="room_squere">Площадь: 14 м²</p>
-                        <p class="room_visiters">Кол-во спальных мест: 3</p>
-                    </div>
-                    <hr>
-                    <div class="room_ul">
-                        <ul>
-                            <li><span>WiFi</span></li>
-                            <li><span>Кондиционер</span></li>
-                            <li><span>Балкон</span></li>
-                            <li><span>Санузел</span></li>
-                            <li><span>Холодильник</span></li>
-                            <li><span>Cейф</span></li>
-                            <li><span>Чайник</span></li>
-                        </ul>
-                    </div>
-                    <div class="room_price">
-                        <p>от 1398 грн</p>
-                    </div>
-                    <div class="room_button">
-                        <button class="btn btn-primary">Бронировать</button>
+                <div class="col-12 col-lg-3 col-sm-6">
+                    <div class="room">
+                        <div class="room_img">
+                            <a href=""><img src="images/room3.png" alt="" width="100%" height="100%"></a>
+                        </div>
+                        <div class="descr">
+                            <div class="room_info">
+                                <h3 class="room_type">Коттедж 2х-местный</h3>
+                                <p class="room_squere">Площадь: 18 м²</p>
+                                <p class="room_visiters">Кол-во спальных мест: 2</p>
+                            </div>
+                            <ul class="room_ul">
+                                <li><span>WiFi</span></li>
+                                <li><span>Кондиционер</span></li>
+                                <li><span>Балкон</span></li>
+                                <li><span>Санузел</span></li>
+                                <li><span>Холодильник</span></li>
+                                <li><span>Туалетные пренадлежности</span></li>
+                                <li><span>Чайник</span></li>
+                            </ul>
+                            <div class="room_price">от 888 грн</div>
+                            <div class="room_button">
+                                <button class="btn btn-primary">Бронировать</button>
+                            </div>
+                        </div>
+                        <!-- /.descr -->
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-lg-3 col-sm-6">
-                <div class="room">
-                    <div class="room_img">
-                        <a href=""><img src="images/room3.png" alt="" width="100%" height="100%"></a>
-                    </div>
-                    <div class="room_info">
-                        <h3 class="room_type">Коттедж 2х-местный</h3>
-                        <p class="room_squere">Площадь: 18 м²</p>
-                        <p class="room_visiters">Кол-во спальных мест: 2</p>
-                    </div>
-                    <hr>
-                    <div class="room_ul">
-                        <ul>
-                            <li><span>WiFi</span></li>
-                            <li><span>Кондиционер</span></li>
-                            <li><span>Балкон</span></li>
-                            <li><span>Санузел</span></li>
-                            <li><span>Холодильник</span></li>
-                            <li><span>Туалетные пренадлежности</span></li>
-                            <li><span>Чайник</span></li>
-                        </ul>
-                    </div>
-                    <div class="room_price">
-                        <p>от 888 грн</p>
-                    </div>
-                    <div class="room_button">
-                        <button class="btn btn-primary">Бронировать</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-3 col-sm-6">
-                <div class="room">
-                    <div class="room_img">
-                        <a href=""><img src="images/room4.png" alt="" width="100%" height="100%"></a>
-                    </div>
-                    <div class="room_info">
-                        <h3 class="room_type">Коттедж 4х-местный</h3>
-                        <p class="room_squere">Площадь: 33 м²</p>
-                        <p class="room_visiters">Кол-во спальных мест: 4</p>
-                    </div>
-                    <hr>
-                    <div class="room_ul">
-                        <ul>
-                            <li><span>WiFi</span></li>
-                            <li><span>Кондиционер</span></li>
-                            <li><span>Балкон</span></li>
-                            <li><span>Санузел</span></li>
-                            <li><span>Холодильник</span></li>
-                            <li><span>Чайник</span></li>
-                        </ul>
-                    </div>
-                    <div class="room_price">
-                        <p>от 2098 грн</p>
-                    </div>
-                    <div class="room_button">
-                        <button class="btn btn-primary">Бронировать</button>
+                <div class="col-12 col-lg-3 col-sm-6">
+                    <div class="room">
+                        <div class="room_img">
+                            <a href=""><img src="images/room4.png" alt="" width="100%" height="100%"></a>
+                        </div>
+                        <div class="descr">
+                            <div class="room_info">
+                                <h3 class="room_type">Коттедж 4х-местный</h3>
+                                <p class="room_squere">Площадь: 33 м²</p>
+                                <p class="room_visiters">Кол-во спальных мест: 4</p>
+                            </div>
+                            <ul class="room_ul">
+                                <li><span>WiFi</span></li>
+                                <li><span>Кондиционер</span></li>
+                                <li><span>Балкон</span></li>
+                                <li><span>Санузел</span></li>
+                                <li><span>Холодильник</span></li>
+                                <li><span>Чайник</span></li>
+                            </ul>
+                            <div class="room_price">от 2098 грн</div>
+                            <div class="room_button">
+                                <button class="btn btn-primary">Бронировать</button>
+                            </div>
+                        </div>
+                        <!-- /.descr -->
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="box">
-    <form action="">
-        <div class="banner_cost">
-            <div class="cost">
+    </section>
+
+    <section class="box" style="background-image: url('./images/form-bg.jpg')">
+        <div class="container">
+            <div class="search-form-wrap">
                 <div class="heading heading-h3 heading-center heading-mb-big">
                     <h2 class="heading_title">
                         Узнайте цену на отдых в Парк Отеле “Берёзка”
                     </h2>
                 </div>
                 <!-- /.heading -->
-                <div class="cost_flex">
-                    <div class="cost_row">
-                        <div class="parameter">
-                            <label class="prefix" for="cost_in1">Дата заезда:</label>
-                            <label class="form_mark" for="cost_in1"></label>
-                            <input name="first_data" required type="text" readonly class="datepicker" id="cost_in1">
-                        </div>
-                    </div>
-                    <div class="cost_row">
-                        <div class="parameter">
-                            <label class="prefix" for="cost_in2">Дата выезда:</label>
-                            <label class="form_mark" for="cost_in2"></label>
-                            <input name="second_data" required type="text" readonly class="datepicker" id="cost_in2">
-                        </div>
-                    </div>
-                    <div class="cost_row">
-                        <div class="parameter" id="cost_3">
-                            <label class="prefix label_for_sel1" for="sel1">Количество номеров:</label>
-                            <label class="form_mark label_for_sel1" name="s1" for="sel1"></label>
-                            <select name="a_num_of_flats" required id="sel1">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="cost_row">
-                        <div class="cost_form_age">
-                            <div class="age" id="cost_4">
-                                <label class="form_mark label_for_sel2" for="sel2"></label>
-                                <label class="prefix label_for_sel2" for="sel2">Взрослых:</label>
-                                <select name="adults" required id="sel2">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                            </div>
-                            <div class="age" id="cost_5">
-                                <label class="prefix label_for_sel3" for="sel3">Детей:</label>
-                                <label class="form_mark label_for_sel3" for="sel3"></label>
-                                <select name="childrens" required id="sel3">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <div>
-                        <input class type="checkbox" required> Я согласен с обработкой моих данных
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="cost_find">
-                        <button type="submit" class="btn btn-primary">Поиск</button>
-                    </div>
-                </div>
+                <div id="sr-embed"></div>
             </div>
+            <!-- /.form-wrap -->
         </div>
-    </form>
-</div>
-<form class="feedback_zone" action="">
-    <div class="box">
-        <div class="feedback_info">
-            <div class="f1">
-                <div class="feedback_text">
-                    <p>Остались вопросы по бронированию? </p>
-                    <p>Мы перезвоним вам в течение 30 минут!</p>
-                </div>
-            </div>
-            <div class="f2f3">
-                <div class="f2">
-                    <div class="feedback_input">
-                        <input name="phone_num" type="tel" required placeholder="Введите ваш номер телефона">
+        <!-- /.container -->
+    </section>
+
+    <div class="box feedback_zone_wrap">
+        <form id="feedback_zone" action="#" method="post">
+
+            <div class="feedback_info">
+                <div class="f1">
+                    <div class="feedback_text">
+                        <p>Остались вопросы по бронированию? </p>
+                        <p>Мы перезвоним вам в течение 30 минут!</p>
                     </div>
                 </div>
-                <div class="f3">
-                    <div class="feedback_button">
-                        <button type="submit" class="btn btn-primary">Заказать звонок</button>
+                <div class="f2f3">
+                    <div class="f2">
+                        <div class="feedback_input">
+                            <input name="phone_num" type="tel" required placeholder="Введите ваш номер телефона">
+                        </div>
+                    </div>
+                    <div class="f3">
+                        <div class="feedback_button">
+                            <button type="submit" class="btn btn-primary">Заказать звонок</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
-</form>
-<div class="google-map">
-    <div class="marker" data-lat="46.628499" data-lng="46.628499"></div>
-</div>
-<div class="menu_header footer">
-    <div class="container">
-        <div class=flex_header>
-            <div class="header_logo">
-                <img src="images/logo.png" alt="" id="logo">
-            </div>
-            <div class="flex_menu">
-                <nav class="menu">
-                    <li class="menu_button"><a href="" onclick="return false;">Главная</a></li>
-                    <li class="menu_button"><a href="" onclick="return false;">Галерея</a></li>
-                    <li class="menu_button"><a href="" onclick="return false;">Доступные номера</a></li>
-                    <li class="menu_button"><a href="" onclick="return false;">Узнать стоимость</a></li>
+
+
+    <section class="google-map">
+        <div class="marker" data-lat="46.628499" data-lng="46.628499"></div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="topline_wrap">
+        <div class="container">
+            <div class="topline">
+                <a href="" class="logo-wrap">
+                    <img src="images/logo.png" alt="">
+                </a>
+                <!-- /.logo-wrap -->
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="">Главная</a></li>
+                        <li><a href="">Галерея</a></li>
+                        <li><a href="">Доступные номера</a></li>
+                        <li><a href="">Узнать стоимость</a></li>
+                    </ul>
                 </nav>
             </div>
+            <!-- /.footer_inner -->
         </div>
+        <!-- /.container -->
     </div>
-    <hr class="hr_m">
-</div>
-<footer>
-    <div class="footer_info row">
-        <div class="f111 col-sm-6 col-md-3 col-lg-3">
-            <div class="footer_text">Наш адрес:</div>
-            <div class="footer_icon">
-                <div class="icon_img" id="fi_1"><img src="src/ico/ok.png" alt=""></div>
-                <div class="icon_text">57454. <p>Николаевская обл.,</p>
-                    <p>Курорт Коблево,</p>
-                    <p>ул.Кишинёвская, 1.</p></div>
-            </div>
-        </div>
-        <div class="f111 col-sm-6 col-md-3 col-lg-3">
-            <div class="footer_text">Позвоните нам:</div>
-            <div class="footer_icon">
-                <div class="icon_img"><img src="src/ico/ok.png" alt=""></div>
-                <div class="icon_text"><p>+ 38 (067) 761-20-17</p></div>
-            </div>
-        </div>
-        <div class="f111 col-sm-6 col-md-4 col-lg-4">
-            <div class="footer_text">Напишите нам:</div>
-            <div class="footer_icon">
-                <div class="icon_img"><img src="src/ico/ok.png" alt=""></div>
-                <div class="icon_text">koblevo.sales@gmail.com</div>
-            </div>
-        </div>
-        <div class="f111 col-sm-6 col-md-2 col-lg-2">
-            <div class="footer_text">Мы в соцсетях:</div>
-            <div class="footer_icon">
-                <div class="icon_img" id="fi_4">
-                    <img src="src/ico/ok.png" alt="">
-                    <img src="src/ico/ok.png" alt="">
-                    <img src="src/ico/ok.png" alt="">
+    <!-- /.topline -->
+    <div class="midline">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-xs-12 col-12">
+                    <div class="foot-card">
+                        <h5 class="title">Наш адрес:</h5>
+                        <!-- /.title -->
+                        <div class="descr">
+                            <img class="ico" src="./images/foot-location.png" alt="">
+                            <!-- /.ico -->
+                            <div class="text">
+                                57454.
+                                Николаевская обл.,
+                                Курорт Коблево,
+                                ул.Кишинёвская, 1.
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.descr -->
+                    </div>
+                    <!-- /.foot-card -->
                 </div>
-                <div class="icon_text"></div>
-            </div>
-        </div>
+                <!-- /.col-xl-3 -->
+                <div class="col-xl-3 col-lg-6 col-md-6 col-xs-12 col-12">
+                    <div class="foot-card">
+                        <h5 class="title">Позвоните нам:</h5>
+                        <!-- /.title -->
+                        <div class="descr">
+                            <img class="ico" src="./images/foot-tel.png" alt="">
+                            <!-- /.ico -->
+                            <div class="text">
+                                <a href="tel:+ 38 (067) 761-20-17">+ 38 (067) 761-20-17</a>
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.descr -->
+                    </div>
+                    <!-- /.foot-card -->
+                </div>
+                <!-- /.col-xl-3 -->
+                <div class="col-xl-3 col-lg-6 col-md-6 col-xs-12 col-12">
+                    <div class="foot-card">
+                        <h5 class="title">Напишите нам:</h5>
+                        <!-- /.title -->
+                        <div class="descr">
+                            <img class="ico" src="./images/foot-mail.png" alt="">
+                            <!-- /.ico -->
+                            <div class="text">
+                                <a href="mailto:koblevo.sales@gmail.com">koblevo.sales@gmail.com</a>
+                            </div>
+                            <!-- /.text -->
+                        </div>
+                        <!-- /.descr -->
+                    </div>
+                    <!-- /.foot-card -->
+                </div>
+                <!-- /.col-xl-3 -->
+                <div class="col-xl-3 col-lg-6 col-md-6 col-xs-12 col-12">
+                    <div class="foot-card">
+                        <h5 class="title">Мы в соцсетях:</h5>
+                        <!-- /.title -->
+                        <div class="descr">
+                            <ul class="foot-soc-list">
+                                <li><a href=""><img src="./images/soc-fb.png" alt=""></a></li>
+                                <li><a href=""><img src="./images/soc-insta.png" alt=""></a></li>
+                                <li><a href=""><img src="./images/soc-yt.png" alt=""></a></li>
+                            </ul>
+                            <!-- /.foot-soc-list -->
+                        </div>
+                        <!-- /.descr -->
+                    </div>
+                    <!-- /.foot-card -->
+                </div>
+                <!-- /.col-xl-3 -->
 
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
     </div>
+    <!-- /.midline -->
 </footer>
 
 
-
 <script src="dist/build.js"></script>
+
+<script>
+    (function (w, d) {
+        var s = d.createElement('script');
+        s.src = 'https://reserv-hotel.info/media/plg_solidres_hub/assets/js/embed.min.js';
+        s.async = 1;
+        s.addEventListener('load', function () {
+            _srembed.load(117, 'ru', {
+                "bgColor": "transparent",
+                "fontColor": "inherit",
+                "inputBg": "transparent",
+                "buttonBg": "#dddddd",
+                "buttonColor": "#888888",
+                "target": "_parent"
+            });
+        });
+        d.getElementsByTagName('head')[0].appendChild(s);
+    })(window, document);
+</script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJbyDAkO2KOUNCnVu8qTjbTgwSzN3jk1k&callback=initMap" async
         defer></script>

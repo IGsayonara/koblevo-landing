@@ -7,7 +7,12 @@ require("bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.min.css"
 import "select2"
 require("select2/dist/css/select2.min.css");
 
+import 'hamburgers'
+require ("hamburgers/dist/hamburgers.min.css")
+
 import './css/index.scss'
+
+
 
 
 function InitMapCLASS(container, styles) {
@@ -66,7 +71,7 @@ function InitMapCLASS(container, styles) {
 
 }
 
-function initMap() {
+window.initMap = function initMap() {
     document.querySelectorAll('.google-map').forEach((el, i) => {
         let styles = [
             {
@@ -153,6 +158,7 @@ function initMap() {
     });
 }
 
+
 $(document).ready(function () {
 
     var $sliderPrimary = $('.slick-carousel_main').slick({
@@ -187,32 +193,16 @@ $(document).ready(function () {
         }
     }
 
+    $('#seeMoreImages_btn').click(function () {
+        // $(this).data-text-toggle
+        $('#seeMoreImages_content').toggle('fast');
+    });
 
-    (function () {
-        console.log( $(".see_more").length );
-        if($(".see_more").length){
+    $('#burger').click(function () {
+        $(this).toggleClass('is-active');
+        $('#burger-content').toggleClass('is-active');
+    });
 
-        }
-    })();
-    // $(".see_more").click(function () {
-    //     if (is_open == false) {
-    //         is_open = true;
-    //
-    //         $(".see_more > button").text("Скрыть");
-    //
-    //         $("#r1").after("<div class='row' id='r2'></div>");
-    //         $("#r2").after("<div class='row' id='r3'></div>");
-    //         $('#r2').append('<div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div><div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div><div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div>');
-    //         $('#r3').append('<div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div><div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div><div class="col-md-4"><a href=""><div class="gallery_photo"><img src="photo1.png" alt="" width="100%"></div></a></div>');
-    //     } else {
-    //         is_open = false;
-    //         $(".see_more > button").text("Смотреть все фото");
-    //         $("#r2").html("");
-    //         $("#r3").html("");
-    //         $("#r2").remove();
-    //         $("#r3").remove();
-    //     }
-    // });
 
 
     $(".datepicker").datepicker();
@@ -236,6 +226,38 @@ $(document).ready(function () {
             $(this).siblings('select').select2('open');
         }
     });
+
+
+    $('.slider_form form,#feedback_zone').submit(function (e) {
+        e.preventDefault();
+        console.log( e );
+        $(this).parent().addClass('disabledDiv');
+
+        $.ajax({
+            type: $(this).prop('method'),
+            url: $(this).prop('action'),
+            data: $(this).serialize(),
+            success: function(response){
+                $(this).parent().append(`
+                    <div class="success">Success!</div>
+                `);
+                $(this).remove();
+                $(this).parent().removeClass('disabledDiv');
+
+            },
+            error: function () {
+                $(this).parent().append(`
+                    <div class="error">Error!</div>
+                `);
+                $(this).remove();
+                $(this).parent().removeClass('disabledDiv');
+
+            }
+        });
+    });
+
+
+
 });
 
 
