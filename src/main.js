@@ -244,7 +244,11 @@ $(document).ready(function () {
             data: $(this).serialize(),
             success: function(response){
                 $(this).parent().append(`
-                    <div class="success">Success!</div>
+                    <div class="success">
+                        <img src="./ico/success.png" alt="">
+                        <h2>Спасибо!<br>Ваш запрос отправлен!</h2>
+                        <p>Наш менеджер свяжется с Вами в ближайшее время</p>
+                    </div>
                 `);
                 $(this).remove();
                 $(this).parent().removeClass('disabledDiv');
@@ -252,7 +256,9 @@ $(document).ready(function () {
             },
             error: function () {
                 $(this).parent().append(`
-                    <div class="error">Error!</div>
+                    <div class="text-center">
+                        <h2>Ошибка!</h2>
+                    </div>
                 `);
                 $(this).remove();
                 $(this).parent().removeClass('disabledDiv');
