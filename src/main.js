@@ -250,7 +250,7 @@ $(document).ready(function () {
                 console.log( response );
                 $(this).parent().append(`
                     <div class="text-center p-2">
-                        ${!response.error ? '<img src="./ico/success.png" alt="">':''}
+                        ${!response.error ? '<img src="./src/ico/success.png" alt="">':''}
                         <h2>${response.heading}</h2>
                         <p>${response.message}</p>
                     </div>
