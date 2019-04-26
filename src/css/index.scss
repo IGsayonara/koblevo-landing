@@ -145,6 +145,18 @@ header.header{
       position: center;
       size: cover;
     };
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 0;
+    }
 
     opacity: 0;
     visibility: hidden;
@@ -213,6 +225,17 @@ header.header{
         position: center;
         size: cover;
       };
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: -1;
+      }
       padding: $burger-menu-h 10vw 0;
 
       z-index: 1;
