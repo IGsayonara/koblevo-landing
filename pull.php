@@ -1,5 +1,5 @@
 <?php
-$output = `cd ../&&git stash;git pull`;
+$output = `git stash;git pull`;
 
 //$logFIle_name = "/gitPull.log";
 
