@@ -213,7 +213,7 @@ header.header{
         position: center;
         size: cover;
       };
-      padding: $burger-menu-h 30vw 0;
+      padding: $burger-menu-h 10vw 0;
 
       z-index: 1;
 
@@ -269,6 +269,7 @@ header.header{
     color: inherit;
     display: block;
     margin: 0 0 3px;
+    text-decoration: none;
   }
   .text{
     display: block;
@@ -630,6 +631,10 @@ header.header{
 
 
 
+
+
+
+
 .gallery {
   .row {
     .col-md-4 {
@@ -772,7 +777,6 @@ header.header{
     }
   }
 }
-
 
 .feedback_zone_wrap {
   //padding: 20px 0;
