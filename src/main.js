@@ -11,7 +11,9 @@ import 'hamburgers'
 require ("hamburgers/dist/hamburgers.min.css");
 
 import 'magnific-popup'
-require ("magnific-popup/dist/magnific-popup.css")
+require ("magnific-popup/dist/magnific-popup.css");
+
+import 'jquery.maskedinput/src/jquery.maskedinput'
 
 import './js/modal'
 
@@ -233,6 +235,8 @@ $(document).ready(function () {
         }
     });
 
+    $('.phone-masked').mask("+38(999)-999-99-99?");
+
     $('.slider_form form,#feedback_zone,#getDetailsModal_form').submit(function (e) {
         e.preventDefault();
         // console.log( e );
@@ -243,27 +247,26 @@ $(document).ready(function () {
             url: $(this).prop('action'),
             data: $(this).serialize(),
             success: function(response){
+                console.log( response );
                 $(this).parent().append(`
-                    <div class="success">
-                        <img src="./ico/success.png" alt="">
-                        <h2>Спасибо!<br>Ваш запрос отправлен!</h2>
-                        <p>Наш менеджер свяжется с Вами в ближайшее время</p>
+                    <div class="text-center p-2">
+                        ${!response.error ? '<img src="./ico/success.png" alt="">':''}
+                        <h2>${response.heading}</h2>
+                        <p>${response.message}</p>
                     </div>
                 `);
-                $(this).remove();
                 $(this).parent().removeClass('disabledDiv');
-
-            },
+                $(this).remove();
+            }.bind(this),
             error: function () {
                 $(this).parent().append(`
                     <div class="text-center">
                         <h2>Ошибка!</h2>
                     </div>
                 `);
-                $(this).remove();
                 $(this).parent().removeClass('disabledDiv');
-
-            }
+                $(this).remove();
+            }.bind(this)
         });
     });
 
