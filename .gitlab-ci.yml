@@ -1,0 +1,10 @@
+stages:
+  - deploy
+  - test
+
+w3c-validation:
+  stage: test
+  script:
+    - scripts/w3c-html-validation.sh
+  only:
+    - master

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>6ерёзка</title>
+    <title>Парк Отель "Берёзка"</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&amp;subset=cyrillic"
           rel="stylesheet">
@@ -32,7 +32,7 @@
 
                 <div class="contacts">
                     <a class="tel" href="tel:+38 (067) 761-20-17">+38 (067) 761-20-17</a>
-                    <a class="text" href="">Заказать звонок</a>
+                    <a class="text" data-toggle="modal" data-target="#getDetailsModal" href="#">Заказать звонок</a>
                 </div>
             </div>
             <!-- /.midline -->
@@ -86,19 +86,22 @@
                 <!-- /.col-md-6 -->
                 <div class="col-md-6">
                     <div class="slider_form">
-                        <form class="" action="#" method="post">
+                        <form class="" action="https://otvet.mk.ua/lk/api/push" method="post">
                             <div>
                                 <h2>Оставьте запрос на лучшую</h2>
                                 <h2>цену кемпинг "Альянс"</h2>
                             </div>
-                            <div class="slider_form_name"><textarea name="sl_info" required="" wrap="hard"
+                            <div class="slider_form_name"><textarea name="description" required="" wrap="hard"
                                                                     placeholder="Ваше имя, количество человек и даты"></textarea>
                             </div>
-                            <div class="slider_form_phone"><input name="sl_phone" required="" type="tel" maxlength="16"
+                            <div class="slider_form_phone"><input name="phone" required="" type="tel" maxlength="16"
                                                                   placeholder="Ваш телефон/viber"></div>
                             <div class="slider_form_button">
                                 <button class="btn btn-primary" type="submit">Хочу на море!</button>
                             </div>
+
+                            <input type="hidden" name="entity_id" value="735" tabindex="-1">
+                            <input type="hidden" name="posttype_id" value="1" tabindex="-1">
                         </form>
                     </div>
                     <!-- /.slider_form -->
@@ -151,19 +154,23 @@
             <div class="form-wrapper">
                 <div class="slider_form_pos form-wrap">
                     <div class="slider_form">
-                        <form class="" action="#" method="post">
+                        <form class="" action="https://otvet.mk.ua/lk/api/push" method="post">
                             <div>
                                 <h2>Оставьте запрос на лучшую</h2>
                                 <h2>цену кемпинг "Альянс"</h2>
                             </div>
-                            <div class="slider_form_name"><textarea name="sl_info" required wrap="hard"
+                            <div class="slider_form_name"><textarea name="description" required wrap="hard"
                                                                     placeholder="Ваше имя, количество человек и даты"></textarea>
                             </div>
-                            <div class="slider_form_phone"><input name="sl_phone" required type="tel"
+                            <div class="slider_form_phone"><input name="phone" required type="tel"
                                                                   maxlength="16" placeholder="Ваш телефон/viber"></div>
                             <div class="slider_form_button">
                                 <button class="btn btn-primary" type="submit">Хочу на море!</button>
                             </div>
+
+                            <input type="hidden" name="entity_id" value="735" tabindex="-1">
+                            <input type="hidden" name="posttype_id" value="1" tabindex="-1">
+
                         </form>
                     </div>
                     <!-- /.slider_form -->
@@ -417,7 +424,7 @@
                     <span aria-hidden="true">+</span>
                 </button>
 
-                <form class="detailsModal_form" id="getDetailsModal_form" action="" method="post">
+                <form class="detailsModal_form" id="getDetailsModal_form" action="https://otvet.mk.ua/lk/api/push" method="post">
                     <div class="heading heading-h3 heading-center heading-mb-big">
                         <h2 class="heading_title">
                             Узнайте наличие номера
@@ -428,14 +435,14 @@
 
                     <div class="input-wrap">
                         <label for="detailsModal_descr">Ваше имя, даты отдыха и кол-во человек</label>
-                        <textarea name="" id="detailsModal_descr" cols="30" rows="10"></textarea>
+                        <textarea name="description" id="detailsModal_descr" cols="30" rows="10"></textarea>
                         <!-- /# -->
                     </div>
                     <!-- /.input-wrap -->
 
                     <div class="input-wrap">
                         <label for="detailsModal_tel">Номер телефона</label>
-                        <input type="text" id="detailsModal_tel">
+                        <input type="text" name="phone" id="detailsModal_tel">
                         <!-- /#detailsModal_descr -->
                     </div>
                     <!-- /.input-wrap -->
@@ -448,6 +455,9 @@
                         <!-- /.btn -->
                     </div>
                     <!-- /.text-center -->
+
+                    <input type="hidden" name="entity_id" value="735" tabindex="-1">
+                    <input type="hidden" name="posttype_id" value="1" tabindex="-1">
 
                 </form>
             </div>
@@ -471,7 +481,7 @@
     </section>
 
     <div class="box feedback_zone_wrap">
-        <form id="feedback_zone" action="#" method="post">
+        <form id="feedback_zone" action="https://otvet.mk.ua/lk/api/push" method="post">
 
             <div class="feedback_info">
                 <div class="f1">
@@ -483,7 +493,7 @@
                 <div class="f2f3">
                     <div class="f2">
                         <div class="feedback_input">
-                            <input name="phone_num" type="tel" required placeholder="Введите ваш номер телефона">
+                            <input name="phone" type="tel" required placeholder="Введите ваш номер телефона">
                         </div>
                     </div>
                     <div class="f3">
@@ -493,6 +503,9 @@
                     </div>
                 </div>
             </div>
+
+            <input type="hidden" name="entity_id" value="735" tabindex="-1">
+            <input type="hidden" name="posttype_id" value="1" tabindex="-1">
         </form>
     </div>
 
@@ -629,7 +642,7 @@
     })(window, document);
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJbyDAkO2KOUNCnVu8qTjbTgwSzN3jk1k&callback=initMap" async
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ5ewdsCKSkgkJ1fb0rgPbtsnVTMlFD40&callback=initMap&ver=1.7" async
         defer></script>
 </body>
 </html>

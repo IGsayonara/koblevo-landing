@@ -1,4 +1,8 @@
-# To start the project
+# To start dev env
 
-* npm install
-* npm start
+1. `npm install`
+2. `npm start`
+
+# To build for prod
+
+1. `npm run-script build`
