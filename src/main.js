@@ -202,6 +202,9 @@ $(document).ready(function () {
 
     $('#seeMoreImages_btn').click(function () {
         $('#seeMoreImages_content').toggle('fast');
+        var currText = this.innerText;
+        this.innerText = $(this).attr('data-text-toggle');
+        $(this).attr('data-text-toggle', currText);
     });
 
     $('#burger').click(function () {
@@ -250,7 +253,7 @@ $(document).ready(function () {
                 console.log( response );
                 $(this).parent().append(`
                     <div class="text-center p-2">
-                        ${!response.error ? '<img src="./src/ico/success.png" alt="">':''}
+                       <!-- ${!response.error ? '<img src="./src/ico/success.png" alt="">':''} -->
                         <h2>${response.heading}</h2>
                         <p>${response.message}</p>
                     </div>
