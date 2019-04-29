@@ -18,7 +18,6 @@ $modal-open: '.modal-open';
   }
   --trans: .3s ease;
   --c-highlight: #4671d5;
-
 }
 
 @import "./_global/display.css";
@@ -52,6 +51,15 @@ html, body {
   }
 }
 
+#whyBest{
+  padding-top:80px;
+  background-color: #f6f8fd
+}
+
+#getDetailsOuter{ 
+  padding: 80px 0;
+  background-size: cover;
+}
 
 .disabledDiv {
   pointer-events: none;
@@ -435,6 +443,8 @@ header.header{
     }
     button{
       $color-main: #e7a300;
+      min-width: 170px;
+      border-radius: 0;
       transition: all var(--trans);
       border:{
         color: $color-main;
@@ -446,7 +456,7 @@ header.header{
       width: unset;
       height: unset;
       margin: 5vh auto 0;
-      padding: 12px 20px;
+      padding: 10px 20px;
       cursor: pointer;
 
       &:hover{
@@ -809,7 +819,7 @@ header.header{
 }
 
 .feedback_zone_wrap {
-  padding: 40px 0;
+  padding: 60px 0;
   background-color: $color-main;
 
   .feedback_info {
@@ -845,11 +855,8 @@ header.header{
   }
 
   .feedback_text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     height: fit-content;
-    line-height: 0.1;
+    line-height: 0.6;
   }
 
   .feedback_input {
