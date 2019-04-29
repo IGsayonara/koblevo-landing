@@ -40,12 +40,16 @@
       font-size: 12px;
       text-transform: uppercase;
       color: white;
-      border: none;
+      border: 2px solid #e7a300;
       border-radius: 0;
-      background-color: orangered;
+      background-color: #e7a300;
       width: 100%;
       padding: 10px 25px;
       cursor: pointer;
+    }
+    .btn:hover{
+      color: #e7a300;
+      background-color: white;
     }
   }
 }
