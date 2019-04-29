@@ -880,6 +880,7 @@ header.header{
   }
 
   .btn {
+    cursor: pointer;
     transition: all var(--trans);
     text-decoration: none;
     font-size: 12px;
