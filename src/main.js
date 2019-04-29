@@ -167,9 +167,11 @@ window.initMap = function initMap() {
 
 
 $(document).ready(function () {
-
+    $(window).resize(function(){
+        $(".slider_form").load("index.html .slider_form")
+    });
     var $sliderPrimary = $('.slick-carousel_main').slick({
-        dots: true,
+        dots: false,
         arrows: false,
         autoplay: false,
         infinite: true,
