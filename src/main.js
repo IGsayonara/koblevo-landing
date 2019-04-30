@@ -202,7 +202,7 @@ $(document).ready(function () {
     function absFormPosCenter(itemToPlace, itemToPlaceIn, positionFrom, disturbingElem) {
         var disturbingHeight = disturbingElem !== undefined ? disturbingElem.height() : 0;
         if ($(window).width() > 990) {
-            itemToPlace.css(positionFrom, (itemToPlaceIn.height() - itemToPlace.height()) / 2 + disturbingHeight + 20 + 'px')
+            itemToPlace.css(positionFrom, (itemToPlaceIn.height() - itemToPlace.height()) / 2 + disturbingHeight + 'px')
         } else {
             itemToPlace.css(positionFrom, 'auto');
         }

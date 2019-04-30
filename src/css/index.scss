@@ -52,6 +52,9 @@ html, body {
   .btn{
     font-weight: 600;
   }
+  select{
+    cursor: pointer;
+  }
 }
 
 #whyBest{
@@ -86,7 +89,7 @@ $burger-menu-h: 80px;
   opacity: 1;
   visibility: visible;
   display: block;
-
+  
   @media screen and (max-width: $width-mobile){
     opacity: 0;
     visibility: hidden;
@@ -102,6 +105,12 @@ $burger-menu-h: 80px;
         right: 0;
       }
     }
+  }
+}
+
+.slider_text{
+  h1{
+    line-height: 0.5;
   }
 }
 
@@ -229,6 +238,7 @@ header.header{
       .slider_form{
         margin: 0 auto;
       }
+      
     }
 
     .header-mobile-absolute{
