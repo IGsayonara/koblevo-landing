@@ -22,7 +22,7 @@ import './css/index.scss'
 
 
 
-function InitMapCLASS(container, styles) {
+/*function InitMapCLASS(container, styles) {
     let _markers = container.querySelectorAll('.marker'),
 
         map = new google.maps.Map(container, {
@@ -164,7 +164,7 @@ window.initMap = function initMap() {
         new InitMapCLASS(el, styles);
     });
 }
-
+*/
 
 $(document).ready(function () {
   /*  $(window).resize(function(){
