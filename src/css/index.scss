@@ -49,6 +49,9 @@ html, body {
       padding-right: 15px;
     }
   }
+  .btn{
+    font-weight: 600;
+  }
 }
 
 #whyBest{
@@ -75,7 +78,7 @@ html, body {
 }
 
 
-$width-mobile: 992px;
+$width-mobile: 990px;
 $burger-menu-h: 80px;
 
 
@@ -444,6 +447,8 @@ header.header{
     button{
       $color-main: #e7a300;
       min-width: 170px;
+      font-weight: 600;
+      text-transform: uppercase;
       border-radius: 0;
       transition: all var(--trans);
       border:{
@@ -642,6 +647,7 @@ header.header{
   .btn{
     margin: 15px 0 0;
     transition: all var(--trans);
+    font-weight: 600;
     border:{
       width: 2px;
       style: solid;
@@ -684,6 +690,7 @@ header.header{
     border: 2px solid $color-main;
     border-radius: 0;
     min-width: 190px;
+    font-weight: 600;
     cursor: pointer;
     &:hover{
       background-color: $color-main;
@@ -798,6 +805,7 @@ header.header{
       margin: 10px auto 0;
 
       .btn {
+        font-weight: 600;
         transition: all var(--trans);
         text-decoration: none;
         font-size: 12px;
@@ -887,6 +895,7 @@ header.header{
   }
 
   .btn {
+    font-weight: 600;
     cursor: pointer;
     transition: all var(--trans);
     text-decoration: none;
