@@ -35,7 +35,12 @@ $modal-open: '.modal-open';
 
 @import "cards/reason.scss";
 
-
+#availableRooms{
+  .heading_title{
+    margin: 0 auto 60px !important;
+  //  text-align: center;
+  }
+}
 html, body {
   //overflow-x: hidden;
   font-family: 'Montserrat', medium;
@@ -110,7 +115,10 @@ $burger-menu-h: 80px;
 
 .slider_text{
   h1{
-    line-height: 0.5;
+    line-height: 1.2;
+  }
+  p{
+    color: white !important;
   }
 }
 
