@@ -35,12 +35,6 @@ $modal-open: '.modal-open';
 
 @import "cards/reason.scss";
 
-#availableRooms{
-  .heading_title{
-    margin: 0 auto 60px !important;
-  //  text-align: center;
-  }
-}
 html, body {
   //overflow-x: hidden;
   font-family: 'Montserrat', medium;
@@ -59,6 +53,13 @@ html, body {
   }
   select{
     cursor: pointer;
+  }
+}
+
+#availableRooms{
+  .heading_title{
+    margin: 0 auto 60px !important;
+  //  text-align: center;
   }
 }
 
@@ -490,6 +491,17 @@ header.header{
   }
 }
 
+#detailsModal_descr{
+  resize: none;
+  font-size: 1.4em;
+  padding: 10px 10px;
+}
+
+#detailsModal_tel{
+  font-optical-sizing: 1.4em;
+  padding: 5px 10px;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -619,7 +631,7 @@ header.header{
       @include textStyle();
 
       margin: 0;
-      padding: 0;
+      padding: 0 0px;
 
       white-space: nowrap;
 
@@ -629,14 +641,14 @@ header.header{
       overflow: hidden;
       text-overflow: ellipsis;
 
-      font-size: 1rem;
+      //font-size: 1rem;
       .required{
         color: var(--c-highlight);
       }
     }
     textarea{
       min-height: 100px;
-      resize: vertical;
+     // resize: vertical;
     }
     textarea,
     input[type="text"],
@@ -658,6 +670,7 @@ header.header{
       &::placeholder{
         opacity: 0;
       }
+      
     }
 
   }
