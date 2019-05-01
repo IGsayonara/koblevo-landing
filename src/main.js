@@ -22,7 +22,7 @@ import './css/index.scss'
 
 
 
-function InitMapCLASS(container, styles) {
+/*function InitMapCLASS(container, styles) {
     let _markers = container.querySelectorAll('.marker'),
 
         map = new google.maps.Map(container, {
@@ -164,12 +164,18 @@ window.initMap = function initMap() {
         new InitMapCLASS(el, styles);
     });
 }
-
+*/
 
 $(document).ready(function () {
-    $(window).resize(function(){
-        $(".slider_form").load("index.html .slider_form")
-    });
+  /*  $(window).resize(function(){
+        console.log($(window).width())
+        if($(window).width() <= '990'){
+            $(".sf_2").load("index.html #sf_2")
+        }
+        else{
+            $(".sf_1").load("index.html #sf_1")
+        }
+    });*/
     var $sliderPrimary = $('.slick-carousel_main').slick({
         dots: false,
         arrows: false,
@@ -196,7 +202,7 @@ $(document).ready(function () {
     function absFormPosCenter(itemToPlace, itemToPlaceIn, positionFrom, disturbingElem) {
         var disturbingHeight = disturbingElem !== undefined ? disturbingElem.height() : 0;
         if ($(window).width() > 990) {
-            itemToPlace.css(positionFrom, (itemToPlaceIn.height() - itemToPlace.height()) / 2 + disturbingHeight + 20 + 'px')
+            itemToPlace.css(positionFrom, (itemToPlaceIn.height() - itemToPlace.height()) / 2 + disturbingHeight + 'px')
         } else {
             itemToPlace.css(positionFrom, 'auto');
         }

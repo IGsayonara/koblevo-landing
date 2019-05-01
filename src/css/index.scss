@@ -35,10 +35,9 @@ $modal-open: '.modal-open';
 
 @import "cards/reason.scss";
 
-
 html, body {
   //overflow-x: hidden;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', medium;
   font-size: 14px;
   line-height: 1.2;
   font-weight: 500;
@@ -48,6 +47,19 @@ html, body {
     @media screen and (min-width: 768px){
       padding-right: 15px;
     }
+  }
+  .btn{
+    font-weight: 600;
+  }
+  select{
+    cursor: pointer;
+  }
+}
+
+#availableRooms{
+  .heading_title{
+    margin: 0 auto 60px !important;
+  //  text-align: center;
   }
 }
 
@@ -75,7 +87,7 @@ html, body {
 }
 
 
-$width-mobile: 992px;
+$width-mobile: 990px;
 $burger-menu-h: 80px;
 
 
@@ -83,7 +95,7 @@ $burger-menu-h: 80px;
   opacity: 1;
   visibility: visible;
   display: block;
-
+  
   @media screen and (max-width: $width-mobile){
     opacity: 0;
     visibility: hidden;
@@ -99,6 +111,15 @@ $burger-menu-h: 80px;
         right: 0;
       }
     }
+  }
+}
+
+.slider_text{
+  h1{
+    line-height: 1.2;
+  }
+  p{
+    color: white !important;
   }
 }
 
@@ -226,6 +247,7 @@ header.header{
       .slider_form{
         margin: 0 auto;
       }
+      
     }
 
     .header-mobile-absolute{
@@ -444,6 +466,8 @@ header.header{
     button{
       $color-main: #e7a300;
       min-width: 170px;
+      font-weight: 600;
+      text-transform: uppercase;
       border-radius: 0;
       transition: all var(--trans);
       border:{
@@ -465,6 +489,17 @@ header.header{
       }
     }
   }
+}
+
+#detailsModal_descr{
+  resize: none;
+  font-size: 1.4em;
+  padding: 10px 10px;
+}
+
+#detailsModal_tel{
+  font-optical-sizing: 1.4em;
+  padding: 5px 10px;
 }
 
 .modal {
@@ -596,7 +631,7 @@ header.header{
       @include textStyle();
 
       margin: 0;
-      padding: 0;
+      padding: 0 0px;
 
       white-space: nowrap;
 
@@ -606,14 +641,14 @@ header.header{
       overflow: hidden;
       text-overflow: ellipsis;
 
-      font-size: 1rem;
+      //font-size: 1rem;
       .required{
         color: var(--c-highlight);
       }
     }
     textarea{
       min-height: 100px;
-      resize: vertical;
+     // resize: vertical;
     }
     textarea,
     input[type="text"],
@@ -628,13 +663,14 @@ header.header{
 
       border: {
         width: 0;
-        radius: 3px;
+
       };
       padding: 5px 0;
 
       &::placeholder{
         opacity: 0;
       }
+      
     }
 
   }
@@ -642,6 +678,7 @@ header.header{
   .btn{
     margin: 15px 0 0;
     transition: all var(--trans);
+    font-weight: 600;
     border:{
       width: 2px;
       style: solid;
@@ -684,6 +721,7 @@ header.header{
     border: 2px solid $color-main;
     border-radius: 0;
     min-width: 190px;
+    font-weight: 600;
     cursor: pointer;
     &:hover{
       background-color: $color-main;
@@ -798,6 +836,7 @@ header.header{
       margin: 10px auto 0;
 
       .btn {
+        font-weight: 600;
         transition: all var(--trans);
         text-decoration: none;
         font-size: 12px;
@@ -887,6 +926,7 @@ header.header{
   }
 
   .btn {
+    font-weight: 600;
     cursor: pointer;
     transition: all var(--trans);
     text-decoration: none;
