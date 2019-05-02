@@ -65,7 +65,10 @@ html, body {
 
 #whyBest{
   padding-top:80px;
-  background-color: #f6f8fd
+  background-color: #f6f8fd;
+  .container{
+    padding: 0;
+  }
 }
 
 #getDetailsOuter{ 
