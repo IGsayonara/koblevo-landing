@@ -65,7 +65,11 @@ html, body {
 
 #whyBest{
   padding-top:80px;
-  background-color: #f6f8fd
+  background-color: #f6f8fd;
+  .container{
+    padding: 0;
+  }
+ 
 }
 
 #getDetailsOuter{ 
@@ -115,11 +119,18 @@ $burger-menu-h: 80px;
 }
 
 .slider_text{
+  
   h1{
-    line-height: 1.2;
+    line-height: 1.5;
   }
-  p{
+  h2{
+    line-height: 1.5;
     color: white !important;
+    img{
+    display: inline-block;
+    height: calc(1rem - 1px);
+    width: calc(1rem - 1px);
+  }
   }
 }
 
@@ -170,6 +181,10 @@ header.header{
   }
 
   .header-mobile{
+    img{
+      width: 1em ;
+      height: 1em ;
+    }
     background: {
       position: center;
       size: cover;
@@ -713,6 +728,40 @@ header.header{
     }
   }
 
+  .btn-call {
+    text-transform: uppercase;
+    margin: -20px 10px 40px;
+    transition: all var(--trans);
+    padding: 10px 25px 10px 25px;
+    background-color: white;
+    color: $color-main;
+    border: 2px solid $color-main;
+    border-radius: 0;
+    min-width: 190px;
+    font-weight: 600;
+    cursor: pointer;
+    img{
+      width: calc(1em - 1px);
+      height: calc(1em - 1px);
+      z-index: 1;
+    }
+    #btn-call-1{
+      display: inline-block;
+    }
+    #btn-call-2{
+      display: none;
+    }
+    &:hover{
+      background-color: $color-main;
+      color: white;
+      #btn-call-1{
+        display: none;
+      }
+      #btn-call-2{
+        display: inline-block;
+      }
+    }
+  }
   .btn-see-more {
     transition: all var(--trans);
     padding: 10px 25px 10px 25px;
