@@ -45,7 +45,7 @@ html, body {
     overflow: hidden;
     position: relative;
     @media screen and (min-width: 768px){
-      padding-right: 15px;
+      padding-right: 15px !important;
     }
   }
   .btn{
@@ -66,13 +66,13 @@ html, body {
 #whyBest{
   padding-top:80px;
   background-color: #f6f8fd;
-  .container{
-    padding: 0;
-  }
- 
+  //.container{
+  //  padding: 0;
+  //}
+
 }
 
-#getDetailsOuter{ 
+#getDetailsOuter{
   padding: 80px 0;
   background-size: cover;
 }
@@ -99,7 +99,7 @@ $burger-menu-h: 80px;
   opacity: 1;
   visibility: visible;
   display: block;
-  
+
   @media screen and (max-width: $width-mobile){
     opacity: 0;
     visibility: hidden;
@@ -119,7 +119,7 @@ $burger-menu-h: 80px;
 }
 
 .slider_text{
-  
+
   h1{
     line-height: 1.5;
   }
@@ -258,7 +258,7 @@ header.header{
       .slider_form{
         margin: 0 auto;
       }
-      
+
     }
 
     .header-mobile-absolute{
@@ -509,8 +509,8 @@ header.header{
 }
 
 #detailsModal_tel{
-  font-optical-sizing: 1.4em;
-  padding: 5px 10px;
+  //font-optical-sizing: 1.4em;
+  //padding: 5px 10px;
 }
 
 .modal {
@@ -676,12 +676,12 @@ header.header{
         width: 0;
 
       };
-      padding: 5px 0;
+      padding: 5px 10px;
 
       &::placeholder{
         opacity: 0;
       }
-      
+
     }
 
   }
@@ -808,8 +808,8 @@ header.header{
 
   display: flex;
   flex-direction: column;
-  
-  
+
+
   height: calc(100% - 30px);
 
   .room_img{
@@ -988,7 +988,7 @@ header.header{
   .btn:hover{
     color: #4671d5;
     background-color: white;
-    border-color: white; 
+    border-color: white;
   }
 }
 
