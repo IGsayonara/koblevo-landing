@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.2.2",
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "babel": "^6.23.0",
     "babel-loader": "^8.0.4",
     "bootstrap-datepicker": "^1.8.0",
