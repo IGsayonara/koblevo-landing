@@ -598,10 +598,12 @@
                 _proto._adjustDialog = function _adjustDialog() {
                     var isModalOverflowing = this._element.scrollHeight > document.documentElement.clientHeight;
 
+                    //vld: works not properly
                     if (!this._isBodyOverflowing && isModalOverflowing) {
                         this._element.style.paddingLeft = this._scrollbarWidth + "px";
                     }
 
+                    //vld: works not properly
                     if (this._isBodyOverflowing && !isModalOverflowing) {
                         this._element.style.paddingRight = this._scrollbarWidth + "px";
                     }
