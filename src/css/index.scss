@@ -56,6 +56,8 @@ html, body {
   }
 }
 
+
+
 #availableRooms{
   .heading_title{
     margin: 0 auto 60px !important;
@@ -68,6 +70,9 @@ html, body {
   background-color: #f6f8fd;
   .container{
     padding: 0;
+  }
+  .row{
+    margin: 0;
   }
  
 }
@@ -181,10 +186,6 @@ header.header{
   }
 
   .header-mobile{
-    img{
-      width: 1em ;
-      height: 1em ;
-    }
     background: {
       position: center;
       size: cover;
