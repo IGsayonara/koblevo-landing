@@ -224,7 +224,7 @@ $(document).ready(function () {
     });
 
     // $('.gallery_photo').magnificPopup({type:'image'});
-    $('.gallery').magnificPopup({
+    $('#gallery_inner').magnificPopup({
         delegate: 'a',
         type: 'image',
         tLoading: 'Загрузка #%curr%...',
