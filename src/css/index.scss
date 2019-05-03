@@ -725,6 +725,8 @@ header.header{
   }
 
   .btn-call {
+    display: inline-block;
+    text-decoration: none;
     text-transform: uppercase;
     margin: -20px 10px 40px;
     transition: all var(--trans);
