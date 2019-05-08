@@ -56,25 +56,20 @@ html, body {
   }
 }
 
-
-
 #availableRooms{
   .heading_title{
     margin: 0 auto 60px !important;
-  //  text-align: center;
+    //  text-align: center;
   }
 }
 
 #whyBest{
   padding-top:80px;
   background-color: #f6f8fd;
-  .container{
-    padding: 0;
-  }
-  .row{
-    margin: 0;
-  }
- 
+  //.container{
+  //  padding: 0;
+  //}
+
 }
 
 #getDetailsOuter{
@@ -132,10 +127,10 @@ $burger-menu-h: 80px;
     line-height: 1.5;
     color: white !important;
     img{
-    display: inline-block;
-    height: calc(1rem - 1px);
-    width: calc(1rem - 1px);
-  }
+      display: inline-block;
+      height: calc(1rem - 1px);
+      width: calc(1rem - 1px);
+    }
   }
 }
 
@@ -664,7 +659,7 @@ header.header{
     }
     textarea{
       min-height: 100px;
-     // resize: vertical;
+      // resize: vertical;
     }
     textarea,
     input[type="text"],
@@ -716,15 +711,24 @@ header.header{
 
 
 
-.call-buttons{
-  .btn-call {
-    .no-wrap{
-      white-space: nowrap;
+
+
+
+
+
+.gallery {
+  .row {
+    .col-md-4 {
+      padding: 10px 10px;
+      text-align: center;
     }
+  }
+
+  .btn-call {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
-    margin: 10px 20px;
+    margin: -20px 10px 40px;
     transition: all var(--trans);
     padding: 10px 25px 10px 25px;
     background-color: white;
@@ -739,25 +743,23 @@ header.header{
       height: calc(1em - 1px);
       z-index: 1;
     }
+    #btn-call-1{
+      display: inline-block;
+    }
+    #btn-call-2{
+      display: none;
+    }
     &:hover{
       background-color: $color-main;
       color: white;
+      #btn-call-1{
+        display: none;
+      }
+      #btn-call-2{
+        display: inline-block;
+      }
     }
   }
-}
-
-
-
-
-.gallery {
-  .row {
-    .col-md-4 {
-      padding: 10px 10px;
-      text-align: center;
-    }
-  }
-
-  
   .btn-see-more {
     transition: all var(--trans);
     padding: 10px 25px 10px 25px;
